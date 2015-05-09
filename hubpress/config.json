@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "psbots",
-    "repositoryName": "blog",
-    "branch": "gh-pages"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"psbots","repositoryName":"blog","branch":"gh-pages","cname":"psbots.in","delay":"1000"},"site":{"url":"http://psbots.in"},"socialnetwork":{},"theme":{"name":"Casper","url":"//psbots.github.io/blog/themes/Casper"}}
