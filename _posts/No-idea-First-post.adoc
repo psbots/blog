@@ -1,2 +1,7 @@
 = First post
 :published_at: No idea!
+:hp-tags: HubPress, Blog, Open Source
+
+
+no idea on whwndf
+image::http://dnmlabs.com/bird.png[]
