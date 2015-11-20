@@ -194,14 +194,33 @@
                     </ul>
                 </p>
                 <h2 id="sec1">Day 1</h2>
-                <p>Day 1 started off with Francisco going through the FabLab presentation, where he explained the need for digital manufacturing and how our choices are impacting the dumping of tonnes of waste due to mass production.</p>
-                <p>We proceeded with installation of Kokopelli, which uses code to produce electronic circuit design. The installation proved to be a task in itself. I used the VirtualBox Ubuntu setup that was done in the first week. However, the program didn't run as expected and showed a blank view even though a sample program for a circle was pre-loaded. I tried make clean, make fab again to no avail. I finally tracked down the problem to be a missing library and it worked fine after I did some pip install taking cue from the github page of kokopelli.</p>
-                <p>Then Francisco showed how Neil had made the entire inventory library in code. He even programmed the Alphabets instead of using a font!</p>
-                <p>We opened Neil's hello.ftdi circuit and added an led and button to it.</p>
-                <p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Day 1 started off with Francisco going through the FabLab presentation, where he explained the need for digital manufacturing and how our choices are impacting the dumping of tonnes of waste due to mass production.</p>
+                        <p>We proceeded with installation of Kokopelli, the software which uses code to produce electronic circuit design. It revolves around the concept of adding programmability into every layer of digital fabrication, and research is going on to even make matter programmable.
+                        </p>
+                        <p>The installation proved to be a task in itself. I used the VirtualBox Ubuntu setup that was done in the first week. I downloaded the <a href="#">koko_retro.zip</a> file which contained the source code for the older version of kokopelli since Neil’s part library works only with the old version. To compile kokopelli, the following steps were followed :
+                            <pre><code>cd koko_retro
+make clean
+make fab</code></pre>
+                        </p>
+                        <p>After successful compiling, to open kokopelli, i run :
+                            <pre><code>./kokopelli -r</code></pre>
+                        </p>
+                        <p>However, the program didn't run as expected and showed a blank view even though a sample program for a circle was pre-loaded. I tried make clean, make fab again to no avail. I finally tracked down the problem to be a missing library and it worked fine after I did some pip install taking cue from the <a href="#">github page</a> of kokopelli.
+                        </p>
+                        <p>Then Francisco showed how Neil had made the entire inventory library in code. He even programmed the Alphabets instead of using a font!</p>
+                        <p>We opened Neil's hello.ftdi circuit and added an led and button to it, following this <a href="#">excellent tutorial</a> on kokopelli by Francisco. The whole exercise opened my eyes to the impact programmability has. Just changing a few parameters, and adding some components means easy and fast customisation of circuits. Here is the screenshot of my edits of Neil’s code along with the final circuit with button and led.</p>
+                    </div>
                     <div class="col-md-12"><img src="img/w4/kokopelli_board.png" class="img-responsive"></div>
-                </p>
-                <p>files to be added</p>
+
+                    <div class="col-md-12">
+                        <p>
+                            <b>Downloadable Files :</b>
+                            <a href="img/w4/hello.ftdi.44.with.Led.Switch.cad">hello.ftdi.44.with.Led.Switch.cad</a>
+                        </p>
+                    </div>
+                </div>
 
                 <!--
                 <div class="row">
@@ -226,147 +245,140 @@
 
                 <div class="row">
 
-                    <div class="col-md-6"><img src="" alt="image of sensor to be added" class="img-responsive img-zoom"></div>
-                    <div class="col-md-6">
-                        <p>Day 2 was for actually milling out the circuit that we had built yesterday using Kokopelli. Since there is only one Roland Modella available, we took turns in milling our boards. While I was waiting for my turn, I thought of tweaking and adding some more components to it. First I looked into the available sensors in the lab. I found a light sensor, which was a PHOTODARLINGTON NPN CLR PLCC-2. I thought it would be great if I could add this as an ambient light sensor to switch on the LED when it was dark and switch off the LED when it was bright. This would allow me to learn more about analog sensors along with the Push-Button, which is a digital Sensor.</p>
+                    <div class="col-md-12">
+                        <p>Day 2 was for actually milling out the circuit that we had built yesterday using Kokopelli. Since there is only one Roland Modella available, we took turns in milling our boards. While I was waiting for my turn, I thought of tweaking and adding some more components to it. First I looked into the available sensors in the lab. I found a light sensor, which was a PHOTODARLINGTON NPN CLR PLCC-2. I thought it would be great if I could add this as an ambient light sensor to switch on the LED when it was dark and switch off the LED when it was bright. This would allow me to learn more about analog sensors along with the Push-Button, which is a digital Sensor. I looked into the <a href="img/w4/OP580DA.pdf">datasheet</a> of the Phototransistor and found that adding it to the existing circuit should be very easy.</p>
+                        <div class="col-md-6">
+                            <div class="col-md-6"><img src="img/w4/photosensor.jpg" alt="image of sensor to be added" class="img-responsive"></div>
+
+                        </div>
+                        <p>I drew a rough circuit diagram on paper to visualise the connections needed. Then one by one I placed the components and joined them to the existing circuit defining wires between VCC, Sensor terminals, Ground and one of the IC analog input.</p>
                     </div>
-
-
-                    <!--
-                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
--->
-                    <p></p>
+                    <div class="col-md-12">
+                        <p>Here is the final circuit I obtained.</p>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="img/w1d1/ubuntu_running.png" class="img-responsive img-zoom">
+                    <div class="col-md-12">
+                        <img src="img/w4/hello_ftdi_btn_light_sensor_circuit.png" class="img-responsive">
                     </div>
-                    <!--
-                <div class="col-md-6">
-                    <p>
-                        It has been a while since I've used Ubuntu, so the installation and setup acted like a refresher for me. Tried out the basic commands on the terminal.
-                        <ul>
-                        <li>sudo apt-get update : To update all the ubuntu packages</li>
-                        <li>sudo apt-get upgrade : To upgrade all the software to the latest version</li>
-                            <li>cd : To change directory</li>
-                            <li>ls : To list the contents of the current directory</li>
-                            <li>mkdir : To make a directory</li>
-                            <li>pwd : To print working directory</li>
-                    </ul>
-                    </p>
-                </div>
--->
-
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <!--
-            <h4>Version Control - Mercurial</h4>
-            <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p>
-            <h4>Documentation - Website</h4>
-            <p>We were asked to work on a website to document all the activities of the Pre-FabAcademy</p><p>I started off looking for good starter-templates for making the website. Landed a very simple and basic one, with a toggle button slider.</p></div>
-        </div>
+                    <div class="col-md-12">
+                        <p>
+                            <b>Downloadable Files :</b>
+                            <a href="img/w4/hello.ftdi.44.light.sensor.cad">hello.ftdi.44.light.sensor.cad</a>
+                        </p>
+                    </div>
+                </div>
                 <hr>
                 <h2 id="sec3">Day 3</h2>
                 <p>
                     Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p>
-        <h4>CAD Design Softwares</h4>
+                <h4>CAD Design Softwares</h4>
                 <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available.</p>
                 <h2 id="sec4">Day 4</h2>
                 <p>Unfortunately I was unable to attend Day 4 but I got to know that we were continuing with Rhino software that Luciano had showed us the previous day. So I went hunting for some basic youtube tutorials for Rhino and made some simple shapes and objects. The next day I learnt from Sibu regarding the interface and some tips and tricks.</p>
-        <p>Rhino screenshots to be added.</p>
+                <p>Rhino screenshots to be added.</p>
                 <hr>
                 <h2 id="sec5">Day 5</h2>
-                <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p><p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are : <ul><li>Geometric Function representation</li><li>Hierarchical Design</li><li>Parametric Design</li></ul></p>
-    <div class="row">
-                     <div class="col-md-6"><img src="img/w1d1/antimony.png" class="img-responsive img-zoom"></div>
-                    <div class="col-md-6"><p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p></div>
+                <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p>
+                <p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are :
+                    <ul>
+                        <li>Geometric Function representation</li>
+                        <li>Hierarchical Design</li>
+                        <li>Parametric Design</li>
+                    </ul>
+                </p>
+                <div class="row">
+                    <div class="col-md-6"><img src="img/w1d1/antimony.png" class="img-responsive img-zoom"></div>
+                    <div class="col-md-6">
+                        <p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p>
+                    </div>
                     <p></p>
                 </div>
-    <p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>
--->
-
-                        <hr>
-                        <!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
-                        <hr> </div>
-                    <!--/right-->
-                </div>
-                <!--/row-->
-            </div>
-            <!--/container-->
-
-            <script src="js/analytics.js" async=""></script>
-            <script type="text/javascript" src="js/jquery.js"></script>
+                <p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>
 
 
-            <script type="text/javascript" src="js/bootstrap.js"></script>
+                <hr>
+                <!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
+                <hr> </div>
+            <!--/right-->
+        </div>
+        <!--/row-->
+    </div>
+    <!--/container-->
+
+    <script src="js/analytics.js" async=""></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 
 
-
-            <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
 
-            <!-- JavaScript jQuery code from Bootply.com editor  -->
+    <script type="text/javascript" src="js/angular.js"></script>
 
-            <script type="text/javascript">
-                $(document).ready(function () {
 
-                    /* activate sidebar */
-                    $('#sidebar').affix({
-                        offset: {
-                            top: 235
-                        }
-                    }); /* activate scrollspy menu */
-                    var $body = $(document.body);
-                    var navHeight = $('.navbar').outerHeight(true) + 10;
-                    $body.scrollspy({
-                        target: '#leftCol',
-                        offset: navHeight
-                    }); /* smooth scrolling sections */
-                    $('a[href*=#]:not([href=#])').click(function () {
-                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                            var target = $(this.hash);
-                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                            if (target.length) {
-                                $('html,body').animate({
-                                    scrollTop: target.offset().top - 50
-                                }, 1000);
-                                return false;
-                            }
-                        }
-                    });
 
-                });
-            </script>
+    <!-- JavaScript jQuery code from Bootply.com editor  -->
 
-            <script>
-                $(document).ready(function () {
-                    $('.img-zoom').hover(function () {
-                        $(this).addClass('transition');
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-                    }, function () {
-                        $(this).removeClass('transition');
-                    });
-                });
-            </script>
+            /* activate sidebar */
+            $('#sidebar').affix({
+                offset: {
+                    top: 235
+                }
+            }); /* activate scrollspy menu */
+            var $body = $(document.body);
+            var navHeight = $('.navbar').outerHeight(true) + 10;
+            $body.scrollspy({
+                target: '#leftCol',
+                offset: navHeight
+            }); /* smooth scrolling sections */
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 50
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
 
-            <script>
-                (function (i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-                ga('create', 'UA-40413119-1', 'bootply.com');
-                ga('send', 'pageview');
-            </script>
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.img-zoom').hover(function () {
+                $(this).addClass('transition');
+
+            }, function () {
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40413119-1', 'bootply.com');
+        ga('send', 'pageview');
+    </script>
 
 
 
