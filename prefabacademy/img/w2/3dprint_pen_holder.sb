@@ -1,0 +1,832 @@
+{
+    "nodes": [
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "zmin",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "5.5",
+                    "name": "zmax",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "2.5",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 4
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('am__f1-r+qXqYf2.5a-f0Z-Zf5.5',float('-2.500000'),float('-2.500000'),float('0.000000'),float('2.500000'),float('2.500000'),float('5.500000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 5
+                }
+            ],
+            "inspector": [
+                -268.88488573674755,
+                -229.41421560112622
+            ],
+            "name": "c0",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Cylinder (Z)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('zmin', float)",
+                "input('zmax', float)",
+                "input('r', float)",
+                "",
+                "output('shape', fab.shapes.cylinder(x, y, zmin, zmax, r))",
+                "",
+                "# UI",
+                "sb.ui.wireframe([(x, y, zmin), (x, y, zmax)])",
+                "sb.ui.wireframe([(x, y, zmin), (x+r, y, zmin)])",
+                "",
+                "sb.ui.wireframe([",
+                "    (math.cos(i/36. * 2*math.pi) * r + x,",
+                "     math.sin(i/36. * 2*math.pi) * r + y, zmin)",
+                "    for i in range(36)], close=True)",
+                "",
+                "sb.ui.wireframe([",
+                "    (math.cos(i/36. * 2*math.pi) * r + x,",
+                "     math.sin(i/36. * 2*math.pi) * r + y, zmax)",
+                "    for i in range(36)], close=True)",
+                "",
+                "sb.ui.point(x, y, zmin)",
+                "sb.ui.point(x, y, zmax)",
+                "sb.ui.point(x + r, y, zmin, drag=(r, None, None))",
+                ""
+            ],
+            "uid": 0
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.3",
+                    "name": "zmin",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "5.5",
+                    "name": "zmax",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "2.3",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 4
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('am__f1-r+qXqYf2.3a-f0.3Z-Zf5.5',float('-2.300000'),float('-2.300000'),float('0.300000'),float('2.300000'),float('2.300000'),float('5.500000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 5
+                }
+            ],
+            "inspector": [
+                -270.8031884771583,
+                20.999999999999996
+            ],
+            "name": "c1",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Cylinder (Z)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('zmin', float)",
+                "input('zmax', float)",
+                "input('r', float)",
+                "",
+                "output('shape', fab.shapes.cylinder(x, y, zmin, zmax, r))",
+                "",
+                "# UI",
+                "sb.ui.wireframe([(x, y, zmin), (x, y, zmax)])",
+                "sb.ui.wireframe([(x, y, zmin), (x+r, y, zmin)])",
+                "",
+                "sb.ui.wireframe([",
+                "    (math.cos(i/36. * 2*math.pi) * r + x,",
+                "     math.sin(i/36. * 2*math.pi) * r + y, zmin)",
+                "    for i in range(36)], close=True)",
+                "",
+                "sb.ui.wireframe([",
+                "    (math.cos(i/36. * 2*math.pi) * r + x,",
+                "     math.sin(i/36. * 2*math.pi) * r + y, zmax)",
+                "    for i in range(36)], close=True)",
+                "",
+                "sb.ui.point(x, y, zmin)",
+                "sb.ui.point(x, y, zmax)",
+                "sb.ui.point(x + r, y, zmin, drag=(r, None, None))",
+                ""
+            ],
+            "uid": 1
+        },
+        {
+            "datums": [
+                {
+                    "expr": "\u0011[__0.__5]",
+                    "name": "a",
+                    "type": "_fabtypes.Shape",
+                    "uid": 0
+                },
+                {
+                    "expr": "\u0011[__1.__5]",
+                    "name": "b",
+                    "type": "_fabtypes.Shape",
+                    "uid": 1
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('aam__f1-r+qXqYf2.5a-f0Z-Zf5.5nam__f1-r+qXqYf2.3a-f0.3Z-Zf5.5',float('-2.500000'),float('-2.500000'),float('0.000000'),float('2.500000'),float('2.500000'),float('5.500000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 2
+                }
+            ],
+            "inspector": [
+                199.7310035183018,
+                -87.103553900281568
+            ],
+            "name": "d0",
+            "script": [
+                "import fab.types",
+                "",
+                "title('Difference')",
+                "input('a', fab.types.Shape)",
+                "input('b', fab.types.Shape)",
+                "",
+                "output('shape', a & ~b)",
+                ""
+            ],
+            "uid": 2
+        },
+        {
+            "datums": [
+                {
+                    "expr": "2.5",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "1.2",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "1.2",
+                    "name": "width",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "1.2",
+                    "name": "height",
+                    "type": "float",
+                    "uid": 4
+                },
+                {
+                    "expr": "1.2",
+                    "name": "depth",
+                    "type": "float",
+                    "uid": 5
+                },
+                {
+                    "expr": "0.25",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45',float('1.900000'),float('-0.600000'),float('0.600000'),float('3.100000'),float('0.600000'),float('1.800000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 7
+                }
+            ],
+            "inspector": [
+                -275.56556093688505,
+                326.05085454364263
+            ],
+            "name": "r0",
+            "script": [
+                "# Neil Gershenfeld 1/24/15",
+                "",
+                "import fab",
+                "",
+                "title('Rounded cube (center)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "input('width', float)",
+                "input('height', float)",
+                "input('depth', float)",
+                "input('r', float)",
+                "",
+                "xmin, xmax = x - width/2, x + width/2",
+                "ymin, ymax = y - height/2, y + height/2",
+                "zmin, zmax = z - depth/2, z + depth/2",
+                "",
+                "# This is the circle's radius in actual units (not a 0-1 fraction)",
+                "r_ = r * min([width, height, depth])/2",
+                "",
+                "output('shape', fab.shapes.rounded_cube(xmin, xmax, ymin, ymax, zmin, zmax, r))",
+                "",
+                "def drag_hwd(this, dx, dy, dz):",
+                "   this.width += 2*dx",
+                "   this.height += 2*dy",
+                "   this.depth += 2*dz",
+                "",
+                "# UI",
+                "def drag_r(this, x, y, z):",
+                "    if abs(this.width) < abs(this.height):",
+                "        d = abs(this.width)",
+                "        mid = this.ymax + this.height/2 - d / 2",
+                "    else:",
+                "        d = abs(this.height)",
+                "        mid = this.y",
+                "    r = 1 - (y - mid) / (d/2)",
+                "    this.r = float(min(1, max(0, r)))",
+                "",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmax, ymin, zmin),",
+                "                  (xmax, ymax, zmin), (xmin, ymax, zmin)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmax), (xmax, ymin, zmax),",
+                "                  (xmax, ymax, zmax), (xmin, ymax, zmax)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmin, ymax, zmin),",
+                "                  (xmin, ymax, zmax), (xmin, ymin, zmax)], close=True)",
+                "sb.ui.wireframe([(xmax, ymin, zmin), (xmax, ymax, zmin),",
+                "                  (xmax, ymax, zmax), (xmax, ymin, zmax)], close=True)",
+                "sb.ui.point(x, y, z)",
+                "sb.ui.point(x + width/2, y + height/2, z + depth/2, drag=drag_hwd)",
+                "sb.ui.point(xmax, ymax - r_, zmax, drag=drag_r, relative=False)",
+                ""
+            ],
+            "uid": 3
+        },
+        {
+            "datums": [
+                {
+                    "expr": "2.5",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "2.8",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "1.2",
+                    "name": "width",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "1.2",
+                    "name": "height",
+                    "type": "float",
+                    "uid": 4
+                },
+                {
+                    "expr": "1.2",
+                    "name": "depth",
+                    "type": "float",
+                    "uid": 5
+                },
+                {
+                    "expr": "0.25",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45',float('1.900000'),float('-0.600000'),float('2.200000'),float('3.100000'),float('0.600000'),float('3.400000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 7
+                }
+            ],
+            "inspector": [
+                -267.66911483716672,
+                662.10170908728537
+            ],
+            "name": "r1",
+            "script": [
+                "# Neil Gershenfeld 1/24/15",
+                "",
+                "import fab",
+                "",
+                "title('Rounded cube (center)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "input('width', float)",
+                "input('height', float)",
+                "input('depth', float)",
+                "input('r', float)",
+                "",
+                "xmin, xmax = x - width/2, x + width/2",
+                "ymin, ymax = y - height/2, y + height/2",
+                "zmin, zmax = z - depth/2, z + depth/2",
+                "",
+                "# This is the circle's radius in actual units (not a 0-1 fraction)",
+                "r_ = r * min([width, height, depth])/2",
+                "",
+                "output('shape', fab.shapes.rounded_cube(xmin, xmax, ymin, ymax, zmin, zmax, r))",
+                "",
+                "def drag_hwd(this, dx, dy, dz):",
+                "   this.width += 2*dx",
+                "   this.height += 2*dy",
+                "   this.depth += 2*dz",
+                "",
+                "# UI",
+                "def drag_r(this, x, y, z):",
+                "    if abs(this.width) < abs(this.height):",
+                "        d = abs(this.width)",
+                "        mid = this.ymax + this.height/2 - d / 2",
+                "    else:",
+                "        d = abs(this.height)",
+                "        mid = this.y",
+                "    r = 1 - (y - mid) / (d/2)",
+                "    this.r = float(min(1, max(0, r)))",
+                "",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmax, ymin, zmin),",
+                "                  (xmax, ymax, zmin), (xmin, ymax, zmin)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmax), (xmax, ymin, zmax),",
+                "                  (xmax, ymax, zmax), (xmin, ymax, zmax)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmin, ymax, zmin),",
+                "                  (xmin, ymax, zmax), (xmin, ymin, zmax)], close=True)",
+                "sb.ui.wireframe([(xmax, ymin, zmin), (xmax, ymax, zmin),",
+                "                  (xmax, ymax, zmax), (xmax, ymin, zmax)], close=True)",
+                "sb.ui.point(x, y, z)",
+                "sb.ui.point(x + width/2, y + height/2, z + depth/2, drag=drag_hwd)",
+                "sb.ui.point(xmax, ymax - r_, zmax, drag=drag_r, relative=False)",
+                ""
+            ],
+            "uid": 4
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "_z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "15",
+                    "name": "a",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "\u0011[__4.__7]",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 4
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45',float('1.679968'),float('-0.087800'),float('2.200000'),float('3.149662'),float('1.381895'),float('3.400000'))",
+                    "name": "rotated",
+                    "type": "_fabtypes.Shape",
+                    "uid": 5
+                }
+            ],
+            "inspector": [
+                79.935048210699534,
+                671.03369418981936
+            ],
+            "name": "r2",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Rotate (Z)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('_z', float)",
+                "input('a', float)",
+                "",
+                "input('shape', fab.types.Shape)",
+                "output('rotated', fab.shapes.rotate_z(shape, a, x, y))",
+                "",
+                "# UI",
+                "rad = math.radians(a)",
+                "sb.ui.wireframe([(x + math.cos(rad), y + math.sin(rad), _z),",
+                "                  (x, y, _z),",
+                "                  (x + 1, y, _z)], color=sb.color.teal)",
+                "",
+                "# Draw a semi-circular arc showing the rotation",
+                "if int(a) % 360 != 0:",
+                "    sb.ui.wireframe([",
+                "        (x + math.cos(math.radians(a_)) * 0.3,",
+                "         y + math.sin(math.radians(a_)) * 0.3, _z)",
+                "        for a_ in range(int(a) % 360)], color=sb.color.teal)",
+                "",
+                "sb.ui.point(x, y, _z, color=sb.color.teal)",
+                "",
+                "def drag_pt(this, x, y, z):",
+                "    this.a = math.degrees(math.atan2(y - this.y, x - this.x))",
+                "sb.ui.point(x + math.cos(rad), y + math.sin(rad), _z,",
+                "             color=sb.color.teal, drag=drag_pt, relative=False)",
+                "",
+                ""
+            ],
+            "uid": 5
+        },
+        {
+            "datums": [
+                {
+                    "expr": "\u0011[__3.__7,__5.__5,__9.__5]",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "8",
+                    "name": "n",
+                    "type": "int",
+                    "uid": 3
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('iiiiiiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f0.707107Y+*f-0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f0.707107Y+*f-0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f-0.707107Y+*f0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f-0.707107Y+*f0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45',float('-3.690587'),float('-3.690587'),float('0.600000'),float('3.690587'),float('3.690587'),float('5.000000'))",
+                    "name": "array",
+                    "type": "_fabtypes.Shape",
+                    "uid": 4
+                }
+            ],
+            "inspector": [
+                461.15641582748231,
+                563.99596126189726
+            ],
+            "name": "a0",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Array (polar)')",
+                "",
+                "input('shape', fab.types.Shape)",
+                "input('x', float)",
+                "input('y', float)",
+                "input('n', int)",
+                "",
+                "output('array', fab.shapes.iterate_polar(shape, x, y, n))",
+                "",
+                "# UI",
+                "sb.ui.wireframe([",
+                "    (math.cos(i/36. * 2*math.pi) * 0.3 + x,",
+                "     math.sin(i/36. * 2*math.pi) * 0.3 + y, 0)",
+                "    for i in range(36)], close=True, color=sb.color.teal)",
+                "",
+                "sb.ui.point(x, y, 0, color=sb.color.teal)",
+                ""
+            ],
+            "uid": 6
+        },
+        {
+            "datums": [
+                {
+                    "expr": "\u0011[__2.__2]",
+                    "name": "a",
+                    "type": "_fabtypes.Shape",
+                    "uid": 0
+                },
+                {
+                    "expr": "\u0011[__6.__4]",
+                    "name": "b",
+                    "type": "_fabtypes.Shape",
+                    "uid": 1
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('aaam__f1-r+qXqYf2.5a-f0Z-Zf5.5nam__f1-r+qXqYf2.3a-f0.3Z-Zf5.5niiiiiiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f0.707107Y+*f-0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f0.707107Y+*f-0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f-0.707107Y+*f0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f-0.707107Y+*f0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45',float('-2.500000'),float('-2.500000'),float('0.000000'),float('2.500000'),float('2.500000'),float('5.500000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 2
+                }
+            ],
+            "inspector": [
+                800.21831755595099,
+                170.0725376350612
+            ],
+            "name": "d1",
+            "script": [
+                "import fab.types",
+                "",
+                "title('Difference')",
+                "input('a', fab.types.Shape)",
+                "input('b', fab.types.Shape)",
+                "",
+                "output('shape', a & ~b)",
+                ""
+            ],
+            "uid": 7
+        },
+        {
+            "datums": [
+                {
+                    "expr": "2.5",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "4.4",
+                    "name": "z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "1.2",
+                    "name": "width",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "1.2",
+                    "name": "height",
+                    "type": "float",
+                    "uid": 4
+                },
+                {
+                    "expr": "1.2",
+                    "name": "depth",
+                    "type": "float",
+                    "uid": 5
+                },
+                {
+                    "expr": "0.25",
+                    "name": "r",
+                    "type": "float",
+                    "uid": 6
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45',float('1.900000'),float('-0.600000'),float('3.800000'),float('3.100000'),float('0.600000'),float('5.000000'))",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 7
+                }
+            ],
+            "inspector": [
+                -242.94423753519573,
+                970.80636292726774
+            ],
+            "name": "r3",
+            "script": [
+                "# Neil Gershenfeld 1/24/15",
+                "",
+                "import fab",
+                "",
+                "title('Rounded cube (center)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('z', float)",
+                "input('width', float)",
+                "input('height', float)",
+                "input('depth', float)",
+                "input('r', float)",
+                "",
+                "xmin, xmax = x - width/2, x + width/2",
+                "ymin, ymax = y - height/2, y + height/2",
+                "zmin, zmax = z - depth/2, z + depth/2",
+                "",
+                "# This is the circle's radius in actual units (not a 0-1 fraction)",
+                "r_ = r * min([width, height, depth])/2",
+                "",
+                "output('shape', fab.shapes.rounded_cube(xmin, xmax, ymin, ymax, zmin, zmax, r))",
+                "",
+                "def drag_hwd(this, dx, dy, dz):",
+                "   this.width += 2*dx",
+                "   this.height += 2*dy",
+                "   this.depth += 2*dz",
+                "",
+                "# UI",
+                "def drag_r(this, x, y, z):",
+                "    if abs(this.width) < abs(this.height):",
+                "        d = abs(this.width)",
+                "        mid = this.ymax + this.height/2 - d / 2",
+                "    else:",
+                "        d = abs(this.height)",
+                "        mid = this.y",
+                "    r = 1 - (y - mid) / (d/2)",
+                "    this.r = float(min(1, max(0, r)))",
+                "",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmax, ymin, zmin),",
+                "                  (xmax, ymax, zmin), (xmin, ymax, zmin)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmax), (xmax, ymin, zmax),",
+                "                  (xmax, ymax, zmax), (xmin, ymax, zmax)], close=True)",
+                "sb.ui.wireframe([(xmin, ymin, zmin), (xmin, ymax, zmin),",
+                "                  (xmin, ymax, zmax), (xmin, ymin, zmax)], close=True)",
+                "sb.ui.wireframe([(xmax, ymin, zmin), (xmax, ymax, zmin),",
+                "                  (xmax, ymax, zmax), (xmax, ymin, zmax)], close=True)",
+                "sb.ui.point(x, y, z)",
+                "sb.ui.point(x + width/2, y + height/2, z + depth/2, drag=drag_hwd)",
+                "sb.ui.point(xmax, ymax - r_, zmax, drag=drag_r, relative=False)",
+                ""
+            ],
+            "uid": 8
+        },
+        {
+            "datums": [
+                {
+                    "expr": "0.0",
+                    "name": "x",
+                    "type": "float",
+                    "uid": 0
+                },
+                {
+                    "expr": "0.0",
+                    "name": "y",
+                    "type": "float",
+                    "uid": 1
+                },
+                {
+                    "expr": "0.0",
+                    "name": "_z",
+                    "type": "float",
+                    "uid": 2
+                },
+                {
+                    "expr": "30",
+                    "name": "a",
+                    "type": "float",
+                    "uid": 3
+                },
+                {
+                    "expr": "\u0011[__8.__7]",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 4
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45',float('1.345447'),float('0.430385'),float('3.800000'),float('2.984677'),float('2.069615'),float('5.000000'))",
+                    "name": "rotated",
+                    "type": "_fabtypes.Shape",
+                    "uid": 5
+                }
+            ],
+            "inspector": [
+                104.65992551267053,
+                979.73834802980161
+            ],
+            "name": "r4",
+            "script": [
+                "import fab",
+                "import math",
+                "",
+                "title('Rotate (Z)')",
+                "",
+                "input('x', float)",
+                "input('y', float)",
+                "input('_z', float)",
+                "input('a', float)",
+                "",
+                "input('shape', fab.types.Shape)",
+                "output('rotated', fab.shapes.rotate_z(shape, a, x, y))",
+                "",
+                "# UI",
+                "rad = math.radians(a)",
+                "sb.ui.wireframe([(x + math.cos(rad), y + math.sin(rad), _z),",
+                "                  (x, y, _z),",
+                "                  (x + 1, y, _z)], color=sb.color.teal)",
+                "",
+                "# Draw a semi-circular arc showing the rotation",
+                "if int(a) % 360 != 0:",
+                "    sb.ui.wireframe([",
+                "        (x + math.cos(math.radians(a_)) * 0.3,",
+                "         y + math.sin(math.radians(a_)) * 0.3, _z)",
+                "        for a_ in range(int(a) % 360)], color=sb.color.teal)",
+                "",
+                "sb.ui.point(x, y, _z, color=sb.color.teal)",
+                "",
+                "def drag_pt(this, x, y, z):",
+                "    this.a = math.degrees(math.atan2(y - this.y, x - this.x))",
+                "sb.ui.point(x + math.cos(rad), y + math.sin(rad), _z,",
+                "             color=sb.color.teal, drag=drag_pt, relative=False)",
+                "",
+                ""
+            ],
+            "uid": 9
+        },
+        {
+            "datums": [
+                {
+                    "expr": "\u0011[__7.__2]",
+                    "name": "shape",
+                    "type": "_fabtypes.Shape",
+                    "uid": 0
+                },
+                {
+                    "expr": "\u0012fab.types.Shape('aaam__f1-r+qXqYf2.5a-f0Z-Zf5.5nam__f1-r+qXqYf2.3a-f0.3Z-Zf5.5niiiiiiim-Xf0-Yf0-Zf0m+*f1X*f0Y+*f-0X*f1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f0.707107Y+*f-0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f6.12323e-17X*f1Y+*f-1X*f6.12323e-17Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f0.707107Y+*f-0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1X*f1.22465e-16Y+*f-1.22465e-16X*f-1Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-0.707107X*f-0.707107Y+*f0.707107X*f-0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f-1.83697e-16X*f-1Y+*f1X*f-1.83697e-16Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.707107X*f-0.707107Y+*f0.707107X*f0.707107Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f0.6Z-Zf1.8am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f0.75Z-Zf1.65-r++q-Xf2.95q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.05q-Yf-0.45q-Zf1.65f0.15-r++q-Xf2.95q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf0.45q-Zf0.75f0.15-r++q-Xf2.95q-Yf-0.45q-Zf0.75f0.15-r++q-Xf2.05q-Yf-0.45q-Zf0.75f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf1.65f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf1.65f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf0.75f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f0.75Z-Zf1.65a-r+q-Yf-0.45q-Zf0.75f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf0.75f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.965926X*f0.258819Y+*f-0.258819X*f0.965926Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f2.2Z-Zf3.4am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f2.35Z-Zf3.25-r++q-Xf2.95q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.25f0.15-r++q-Xf2.95q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf0.45q-Zf2.35f0.15-r++q-Xf2.95q-Yf-0.45q-Zf2.35f0.15-r++q-Xf2.05q-Yf-0.45q-Zf2.35f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf3.25f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.25f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf2.35f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f2.35Z-Zf3.25a-r+q-Yf-0.45q-Zf2.35f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf2.35f0.15a-f-0.45Y-Yf0.45m-Xf0-Yf0-Zf0m+*f0.866025X*f0.5Y+*f-0.5X*f0.866025Y_m-Xf-0-Yf-0-Zf0iiiiiiiiiiiiiiiiiiiiiam__f1aa-f2.05X-Xf2.95a-f-0.45Y-Yf0.45a-f3.8Z-Zf5am__f1iaa-f1.9X-Xf3.1a-f-0.45Y-Yf0.45aa-f2.05X-Xf2.95a-f-0.6Y-Yf0.6a-f3.95Z-Zf4.85-r++q-Xf2.95q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.05q-Yf-0.45q-Zf4.85f0.15-r++q-Xf2.95q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf0.45q-Zf3.95f0.15-r++q-Xf2.95q-Yf-0.45q-Zf3.95f0.15-r++q-Xf2.05q-Yf-0.45q-Zf3.95f0.15am__f1-r+q-Xf2.95q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf4.85f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf4.85f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.95q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.95q-Zf3.95f0.15a-f-0.45Y-Yf0.45am__f1-r+q-Xf2.05q-Yf-0.45f0.15a-f3.95Z-Zf4.85a-r+q-Yf-0.45q-Zf3.95f0.15a-f2.05X-Xf2.95a-r+q-Xf2.05q-Zf3.95f0.15a-f-0.45Y-Yf0.45',float('-2.500000'),float('-2.500000'),float('0.000000'),float('2.500000'),float('2.500000'),float('5.500000'))",
+                    "name": "out",
+                    "type": "_fabtypes.Shape",
+                    "uid": 1
+                }
+            ],
+            "inspector": [
+                1175.3908041976201,
+                178.01814914623532
+            ],
+            "name": "m0",
+            "script": [
+                "import fab",
+                "",
+                "title('Mesh (.stl)')",
+                "",
+                "input('shape', fab.types.Shape)",
+                "output('out', shape)",
+                "",
+                "sb.export.stl(shape)",
+                ""
+            ],
+            "uid": 10
+        }
+    ],
+    "protocol": 6,
+    "type": "sb"
+}
