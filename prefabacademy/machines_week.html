@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide {
+            display: none !important;
+        }
+        
+        ng\:form {
+            display: block;
+        }
+        
+        .ng-animate-start {
+            clip: rect(0, auto, auto, 0);
+            -ms-zoom: 1.0001;
+        }
+        
+        .ng-animate-active {
+            clip: rect(-1px, auto, auto, 0);
+            -ms-zoom: 1;
+        }
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>PreFabAcademy - Praveen Sridhar</title>
+    <meta name="generator" content="Bootply">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <link href="js/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <link rel="apple-touch-icon" href="http://www.bootply.com/bootstrap/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.bootply.com/bootstrap/img/apple-touch-icon-114x114.png">
+
+
+
+
+
+
+
+
+
+
+    <!-- CSS code from Bootply.com editor -->
+
+    <style type="text/css">
+        /*A Bootstrap 3.1 affix sidebar templatefrom http://bootply.comThis CSS code should follow the 'bootstrap.css'in your HTML file.license: MITauthor: bootply.com*/
+        
+        body {
+            padding-top: 50px;
+            font-size: 200%;
+            font-family: Georgia, "Times New Roman", Serif;
+        }
+        
+        #masthead {
+            min-height: 250px;
+        }
+        
+        #masthead h1 {
+            font-size: 30px;
+            line-height: 1;
+            padding-top: 20px;
+        }
+        
+        #masthead .well {
+            margin-top: 8%;
+        }
+        
+        @media screen and (min-width: 768px) {
+            #masthead h1 {
+                font-size: 50px;
+            }
+        }
+        
+        .navbar-bright {
+            background-color: #111155;
+            color: #fff;
+        }
+        
+        .affix-top,
+        .affix {
+            position: static;
+        }
+        
+        @media (min-width: 979px) {
+            #sidebar.affix-top {
+                position: static;
+                margin-top: 30px;
+                width: 228px;
+            }
+            #sidebar.affix {
+                position: fixed;
+                top: 70px;
+                width: 228px;
+            }
+        }
+        
+        #sidebar li.active {
+            border: 0 #eee solid;
+            border-right-width: 5px;
+        }
+        
+        .img-zoom {
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+        }
+        
+        .transition {
+            -webkit-transform: scale(2);
+            -moz-transform: scale(2);
+            -o-transform: scale(2);
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<!-- HTML code from Bootply.com editor -->
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Praveen Sridhar</a> </div>
+            <nav class="collapse navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li> <a href="index.html">Introduction and Setup Week</a> </li>
+                    <li> <a href="machines_week.html">Fab Machines Week</a> </li>
+                    <li> <a href="design_project_week.html">Project Design Week</a> </li>
+                    <li> <a href="electronics_week.html">Electronics Week</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2>Machines Week</h2>
+                    <h1> Pre-FabAcademy @ FabLab Kochi 2015           <p class="lead">Preparing to make "almost" anything!</p>  <hr>        </h1> </div>
+                <div class="col-md-5">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-sm-6"> <img src="img/FabLab-Logo.png" width="150" class="img-responsive"> </div>
+                            <div class="col-sm-6"> <img src="img/KeralaStartupMissionLogo.jpg" width="150" class="img-responsive"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/container-->
+    </div>
+    <!--/masthead-->
+    <!--main-->
+    <div class="container">
+        <div class="row">
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+                <ul class="nav nav-stacked affix-top" id="sidebar">
+                    <li><a href="#sec0">Introduction</a></li>
+                    <li><a href="#sec1">Stickers with Vinyl Cutter</a></li>
+                    <li><a href="#sec2">3D Printing a Pen Stand</a></li>
+                    <li><a href="#sec3">Laser Cutter</a></li>
+                    <!--                    <li><a href="#sec4">Electronics Production</a></li>-->
+
+                </ul>
+            </div>
+            <!--/left-->
+            <!--right-->
+            <div class="col-md-9">
+                <h2 id="sec0">Week 2 : The Fabulous Machines!</h2>
+                <p>This week is all about machines!</p>
+                <p>Let the "Machining" begin!</p>
+                <hr>
+
+                <h2 id="sec1">Stickers with Vinyl Cutter</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Vinyl Cutter can be used to cut out Vinyl Stickers for labelling or increasing the aesthetic value of the projects done in the FabLab. Luciano told us about the functioning of the Vinyl Cutter and cut out a sample design using the fab modules software on Ubuntu. He then asked us to design or download something to practice operating the machine.
+
+                        </p>
+                        <p>I did a google image search for interesting black and white figures and found this great picture of Iron Man. I had to modify the dimensions of the image and convert it to grayscale.
+
+                        </p>
+                        <p>After opening fab modules, click on image(png) as input and Roland vinylcutter (.camm) as output. Then click on make_png_camm button.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/vinyl_png.jpg" class="img-responsive">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Now click on load image and select the required image. Resize it as per the requirements. Select vinyl in the dropdown list and click on make .path followed by make .camm
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/vinyl_fab_mod.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Next set-up the Vinyl Cutter by loading the vinyl sheet between the rollers as shown. The roll can be set by selecting "Roll" and then Origin can also be set. Click on "send it" on the fab modules to start cutting the vinyl.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/vinyl_red.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/vinyl_power.jpeg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Here's the Vinyl cut out and placed on a masking tape. I put the sticker on my hard disk. Looks pretty great! This machine really makes it very convenient to make labels and graphic stickers for our projects.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/vinyl_mask.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/vinyl_harddisk.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+                <hr>
+                <h2 id="sec2">3D Printing a Pen Stand</h2>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Luciano asked us to design an object within 5cm * 5cm * 5 cm dimensions, which cannot be manufactured subtractively. The idea was to design an intricate enough object that would be difficult to manufacture subtractively but simple enough to 3D Print.
+                        </p>
+                        <p>I was brainstorming on what could be built, and came up with a very simple design for a cylindrical Pen Holder with a pattern of rounded rectangular holes around it. I used Antimony to do the design.
+                        </p>
+                        <p>
+                            First I made a cylinder with the outer radius and subtracted a cylinder to get the required thickness for the stand.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/pen_stand.png" class="img-responsive">
+                    </div>
+
+
+                    <!--
+                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
+                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
+-->
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Then I created a rounded cube and subtracted it from the cylinder after placing it in the position I wanted. Then I used the Array Polar to replicate the hole around the surface of the cylinder.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/pen_stand2.png" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Finally, I copy pasted the Array twice, translated it to the middle and upper positions, rotated it a bit to give it an interesting asymmetry and here’s the final result! Here are the .sb and .stl files :
+
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/pen_stand3.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Now comes the actual 3D printing of the model. First I opened the .stl model in Cura and exported the .gcode with the Normal mode settings.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/penstand_cura.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Then I loaded the .gcode file onto the SD card and gave the Print command on the Ultimaker 2 machine.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/penstand_ulti.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Here’s the Pen Holder in action at the Lab. Though it was meant as a “Pen” holder, it is much more useful now near the soldering station for holding Cutters, Scale and Tweezers!
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/penstand_fab.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/penstand_final.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <hr>
+                <h2 id="sec3">Laser Cutter</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>The laser cutter at FabLab Kochi was out of order, so we all went to FabLab Thiruvananthapuram for practicing on it.
+                        </p>
+                        <p>Luciano tried to set up the fab modules to work with the laser cutter, but faced trouble since this was a new machine and not the usual one found in older FabLabs.
+                        </p>
+                        <p>He proceeded with the vendor software Trotec Job Control to show us a demo of the laser cutting process. He then asked us to design a small object to practice the laser cutting process.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/laser_machine.jpg" class="img-responsive">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            I designed a basic ring-shaped coaster with a hexagonal design to be etched.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/laser_design.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>First the laser is focused using the focusing aparatus and the Button controls on the right end of the machine.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/laser_cut.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/laser_controls.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>The speed and intensity of the laser can be varied using the settings of the Trotec software.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/laser_software.00_jpg_srz" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Here's the final coaster!
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/laser_final.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+                <hr>
+                <!--                <h2 id="sec4">Electronics Production</h2>-->
+
+
+                <hr>
+                <hr> </div>
+            <!--/right-->
+        </div>
+        <!--/row-->
+    </div>
+    <!--/container-->
+
+    <script src="js/analytics.js" async=""></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+
+    <script type="text/javascript" src="js/angular.js"></script>
+
+
+
+    <!-- JavaScript jQuery code from Bootply.com editor  -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /* activate sidebar */
+            $('#sidebar').affix({
+                offset: {
+                    top: 235
+                }
+            }); /* activate scrollspy menu */
+            var $body = $(document.body);
+            var navHeight = $('.navbar').outerHeight(true) + 10;
+            $body.scrollspy({
+                target: '#leftCol',
+                offset: navHeight
+            }); /* smooth scrolling sections */
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 50
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.img-zoom').hover(function () {
+                $(this).addClass('transition');
+
+            }, function () {
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40413119-1', 'bootply.com');
+        ga('send', 'pageview');
+    </script>
+
+
+
+</body>
+
+</html>

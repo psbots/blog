@@ -30,7 +30,7 @@
     </style>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Bootply snippet - Bootply Bootstrap Preview</title>
+    <title>PreFabAcademy - Praveen Sridhar</title>
     <meta name="generator" content="Bootply">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
@@ -59,6 +59,8 @@
 
         body {
             padding-top: 50px;
+            font-size: 200%;
+            font-family: Georgia, "Times New Roman", Serif;
         }
 
         #masthead {
@@ -132,14 +134,13 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="http://www.psbots.in/prefabacademy" class="navbar-brand">Praveen Sridhar</a> </div>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Praveen Sridhar</a> </div>
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li> <a href="#sec">Week 1</a> </li>
-                    <li> <a href="#sec">Week 2</a> </li>
-                    <li> <a href="#sec">Week 3</a> </li>
-                    <li> <a href="week4.html">Week 4</a> </li>
-                    <li> <a href="#sec">Project</a> </li>
+                    <li> <a href="index.html">Introduction and Setup Week</a> </li>
+                    <li> <a href="machines_week.html">Fab Machines Week</a> </li>
+                    <li> <a href="design_project_week.html">Project Design Week</a> </li>
+                    <li> <a href="electronics_week.html">Electronics Week</a> </li>
                 </ul>
             </nav>
         </div>
@@ -148,12 +149,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
+                    <h2>Introduction and Setup Week</h2>
                     <h1> Pre-FabAcademy @ FabLab Kochi 2015           <p class="lead">Preparing to make "almost" anything!</p>          </h1> </div>
                 <div class="col-md-5">
                     <div class="well well-lg">
                         <div class="row">
-                            <div class="col-sm-6"> <img src="img/FabLab-Logo.png" width="200" class="img-responsive"> </div>
-                            <div class="col-sm-6"> <img src="img/KeralaStartupMissionLogo.jpg" width="200" class="img-responsive"></div>
+                            <div class="col-sm-6"> <img src="img/FabLab-Logo.png" width="150" class="img-responsive"> </div>
+                            <div class="col-sm-6"> <img src="img/KeralaStartupMissionLogo.jpg" width="150" class="img-responsive"></div>
                         </div>
                     </div>
                 </div>
@@ -186,11 +188,12 @@
                 <p>Week 1 involved getting to know fellow participants and the instructor. We were guided through the various software setup required for successfully completing FabAcademy. The weeks activities included installing and getting familiar with :
                     <ul>
                     <li>version control software - mercurial and git</li>
-                    <li>video conferencing softwares - LinPhone and Cisco Jabber Video</li>
                     <li>virtualbox ubuntu setup</li>
+                    <li>fab modules setup on Ubuntu</li>
                     <li>2D and 3D design softwares</li>
                 </ul> </p>
                 <h2 id="sec1">Day 1</h2>
+                <img src="img/w1/fablabdoor.jpg" class="img-responsive">
                 <p>Day 1 started off with all the participants introducing themselves. We were fortunate to have someone like Luciano Betoldi who has a lot of experience in running the FabLab at Barcelona as our instructor.</p><p>Luciano told us about the FabAcademy program, how it was very challenging but rewarding as well. He mentioned the various topics that would be covered by Neil during the 6 month long classes and gave us a hint about the weekly assignments.</p><p>He also showed a few examples of Final projects made by participants of earlier FabAcademy runs and showed us the websites for documentation.</p><p>Then he moved on to explain about the Pre-FabAcademy, its need and aim.</p><p>The equipments and consumables in the lab were in bit of a dis-order, and we spent the rest of the day rearranging and reorganising the lab for improving our productivity in the coming days as recommended by Luciano.</p>
 <!--
                 <div class="row">
@@ -214,7 +217,7 @@
                 <h2 id="sec2">Day 2</h2>
 
                 <div class="row">
-                     <div class="col-md-6"><img src="img/w1d1/fabuntu.png" class="img-responsive img-zoom"></div>
+                     <div class="col-md-6"><img src="img/w1/fabuntu.png" class="img-responsive img-zoom"></div>
                     <div class="col-md-6"><p>Day 2 started off with Luciano telling us about the software setup used in FabAcademy. He asked all of us to get Ubuntu running on our laptops. Since I'm using a Mac, I found it better to get Ubuntu running on a VirtualBox instead of installing it in the hard-disk. </p></div>
 
 
@@ -225,49 +228,78 @@
                     <p></p>
                 </div>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="img/w1d1/ubuntu_running.png" class="img-responsive img-zoom">
-                </div>
+                
                 <div class="col-md-6">
                     <p>
                         It has been a while since I've used Ubuntu, so the installation and setup acted like a refresher for me. Tried out the basic commands on the terminal.
                         <ul>
-                        <li>sudo apt-get update : To update all the ubuntu packages</li>
-                        <li>sudo apt-get upgrade : To upgrade all the software to the latest version</li>
-                            <li>cd : To change directory</li>
-                            <li>ls : To list the contents of the current directory</li>
-                            <li>mkdir : To make a directory</li>
-                            <li>pwd : To print working directory</li>
+                        <li><b>sudo apt-get update</b> : To update all the ubuntu packages</li>
+                        <li><b>sudo apt-get upgrade</b> : To upgrade all the software to the latest version</li>
+                            <li><b>cd</b> : To change directory</li>
+                            <li><b>ls</b> : To list the contents of the current directory</li>
+                            <li><b>mkdir</b> : To make a directory</li>
+                            <li><b>pwd</b> : To print working directory</li>
                     </ul>
                     </p>
                 </div>
-
+            <div class="col-md-6">
+                    <img src="img/w1/ubuntu_running.png" class="img-responsive img-zoom">
+            </div>
             </div>
         <div class="row">
-            <div class="col-md-6">
-            <h4>Version Control - Mercurial</h4>
-            <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p>
-            <h4>Documentation - Website</h4>
-            <p>We were asked to work on a website to document all the activities of the Pre-FabAcademy</p><p>I started off looking for good starter-templates for making the website. Landed a very simple and basic one, with a toggle button slider.</p></div>
+            
+            <div class="col-md-12">
+                    <img src="img/w1/blog.jpg" class="img-responsive">
+            </div>
+            
+            <div class="col-md-12">
+            <h4><b>Version Control - Mercurial and Git</b></h4>
+            <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p><p>Since I already had a github account and was running a blog using Github Pages : <a href="http://psbots.in">psbots.in</a>, I thought it would be best to have the documentation as a sub-directory of my blog and hence I placed it as shown in the figure.</p>
+            <h4><b>Documentation - Website</b></h4>
+            <p>We were asked to work on a website to document all the activities of the Pre-FabAcademy</p><p>I started off looking for good starter-templates for making the website. Landed a very simple and basic one, with a toggle button slider.</p><p>Since the documentation is a git repository, new content can be updated to Github pages using the following commands :</p>
+            <pre><code>git add .
+git commit -m "message to signify new content"
+git push
+            </code></pre>
+            </div>
         </div>
                 <hr>
                 <h2 id="sec3">Day 3</h2>
-                <p>
-                    Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p>
-        <h4>CAD Design Softwares</h4>
-                <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available.</p>
+        <div class="row">
+            <div class="col-md-12">    
+            <p>
+                    Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p><p>We then proceeded with the installation of fab modules on the ubuntu virtual machine, following the instructions at <a src="http://kokompe.cba.mit.edu">kokompe.cba.mit.edu</a>.</p><p>After downloading the fab_src.zip from the downloads section, it was unzipped, and the following commands were run for installation.</p><pre><code>make fab
+make install</code></pre>
+                 <p>But the installation got into all sorts of errors, claiming "unable to find" errors. That is when I realised that I forgot to install the dependencies.</p>
+            <pre><code>sudo apt-get install python python-wxgtk2.8 python-dev python-pip gcc g++ libpng12-dev libgif-dev make bash okular libboost-thread-dev libboost-system-dev cmake</code></pre>
+        <h4><b>CAD Design Softwares</b></h4>
+                <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available. He passed aroung a Pen Drive with installation files of many different CAD Software.</p><p>I tried out a few of them, here are the screenshots.</p>
+            </div>
+            <div class="col-md-6">
+                    <img src="img/w1/shapesmith.png" class="img-responsive img-zoom">
+            </div>
+            <div class="col-md-6">
+                    <img src="img/w1/tinkercad.png" class="img-responsive img-zoom">
+            </div>
+            <div class="col-md-6">
+                    <img src="img/w1/autocad.png" class="img-responsive img-zoom">
+            </div>
+            <div class="col-md-6">
+                    <video src="img/w1/Screen%20Capture%202.mov" class="img-responsive img-zoom">
+            </div>
+            </div>
                 <h2 id="sec4">Day 4</h2>
                 <p>Unfortunately I was unable to attend Day 4 but I got to know that we were continuing with Rhino software that Luciano had showed us the previous day. So I went hunting for some basic youtube tutorials for Rhino and made some simple shapes and objects. The next day I learnt from Sibu regarding the interface and some tips and tricks.</p>
         <p>Rhino screenshots and files to be added.</p>
                 <hr>
                 <h2 id="sec5">Day 5</h2>
+            <div class="row">
                 <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p><p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are : <ul><li>Geometric Function representation</li><li>Hierarchical Design</li><li>Parametric Design</li></ul></p>
-    <div class="row">
-                     <div class="col-md-6"><img src="img/w1d1/antimony.png" class="img-responsive img-zoom"></div>
+                     <div class="col-md-6"><img src="img/w1/antimony.png" class="img-responsive img-zoom"></div>
                     <div class="col-md-6"><p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p><p>Files to be added</p></div>
                     <p></p>
                 </div>
-    <p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>
+   
 
                 <hr>
 <!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->

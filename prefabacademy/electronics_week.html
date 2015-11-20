@@ -13,16 +13,16 @@
         .ng-hide {
             display: none !important;
         }
-
+        
         ng\:form {
             display: block;
         }
-
+        
         .ng-animate-start {
             clip: rect(0, auto, auto, 0);
             -ms-zoom: 1.0001;
         }
-
+        
         .ng-animate-active {
             clip: rect(-1px, auto, auto, 0);
             -ms-zoom: 1;
@@ -30,7 +30,7 @@
     </style>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>Bootply snippet - Bootply Bootstrap Preview</title>
+    <title>PreFabAcademy - Praveen Sridhar</title>
     <meta name="generator" content="Bootply">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
@@ -56,41 +56,43 @@
 
     <style type="text/css">
         /*A Bootstrap 3.1 affix sidebar templatefrom http://bootply.comThis CSS code should follow the 'bootstrap.css'in your HTML file.license: MITauthor: bootply.com*/
-
+        
         body {
             padding-top: 50px;
+            font-size: 200%;
+            font-family: Georgia, "Times New Roman", Serif;
         }
-
+        
         #masthead {
             min-height: 250px;
         }
-
+        
         #masthead h1 {
             font-size: 30px;
             line-height: 1;
             padding-top: 20px;
         }
-
+        
         #masthead .well {
             margin-top: 8%;
         }
-
+        
         @media screen and (min-width: 768px) {
             #masthead h1 {
                 font-size: 50px;
             }
         }
-
+        
         .navbar-bright {
             background-color: #111155;
             color: #fff;
         }
-
+        
         .affix-top,
         .affix {
             position: static;
         }
-
+        
         @media (min-width: 979px) {
             #sidebar.affix-top {
                 position: static;
@@ -103,19 +105,19 @@
                 width: 228px;
             }
         }
-
+        
         #sidebar li.active {
             border: 0 #eee solid;
             border-right-width: 5px;
         }
-
+        
         .img-zoom {
             -webkit-transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             -o-transition: all .2s ease-in-out;
             -ms-transition: all .2s ease-in-out;
         }
-
+        
         .transition {
             -webkit-transform: scale(2);
             -moz-transform: scale(2);
@@ -132,14 +134,13 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="banner">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="http://www.psbots.in/prefabacademy" class="navbar-brand">Praveen Sridhar</a> </div>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="index.html" class="navbar-brand">Praveen Sridhar</a> </div>
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
-                    <li> <a href="index.html">Week 1</a> </li>
-                    <li> <a href="#sec">Week 2</a> </li>
-                    <li> <a href="#sec">Week 3</a> </li>
-                    <li> <a href="week4.html">Week 4</a> </li>
-                    <li> <a href="#sec">Project</a> </li>
+                    <li> <a href="index.html">Introduction and Setup Week</a> </li>
+                    <li> <a href="machines_week.html">Fab Machines Week</a> </li>
+                    <li> <a href="design_project_week.html">Project Design Week</a> </li>
+                    <li> <a href="electronics_week.html">Electronics Week</a> </li>
                 </ul>
             </nav>
         </div>
@@ -148,12 +149,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
+                    <h2>Electronics Week</h2>
                     <h1> Pre-FabAcademy @ FabLab Kochi 2015           <p class="lead">Preparing to make "almost" anything!</p>          </h1> </div>
                 <div class="col-md-5">
                     <div class="well well-lg">
                         <div class="row">
-                            <div class="col-sm-6"> <img src="img/FabLab-Logo.png" width="200" class="img-responsive"> </div>
-                            <div class="col-sm-6"> <img src="img/KeralaStartupMissionLogo.jpg" width="200" class="img-responsive"></div>
+                            <div class="col-sm-6"> <img src="img/FabLab-Logo.png" width="150" class="img-responsive"> </div>
+                            <div class="col-sm-6"> <img src="img/KeralaStartupMissionLogo.jpg" width="150" class="img-responsive"></div>
                         </div>
                     </div>
                 </div>
@@ -185,15 +187,23 @@
                 <hr>
                 <p>Week 4 was all about electronics design and programming. We were guided through the software setup for kokopelli, the software that allows to design circuits using python code! The weeks activities included installing and getting familiar with :
                     <ul>
-                    <li>Installation and working of Kokopelli software</li>
-                    <li>...</li>
-                    <li>...</li>
-                    <li>...</li>
-                </ul> </p>
+                        <li>Installation and working of Kokopelli software</li>
+                        <li>Adding LED and Button to Neil's HelloFTDI board</li>
+                        <li>Milling Hello FTDI using Modella</li>
+                        <li>Programming Hello FTDI</li>
+                    </ul>
+                </p>
                 <h2 id="sec1">Day 1</h2>
-            <p>Day 1 started off with Francisco going through the FabLab presentation, where he explained the need for digital manufacturing and how our choices are impacting the dumping of tonnes of waste due to mass production.</p><p>We proceeded with installation of Kokopelli, which uses code to produce electronic circuit design. The installation proved to be a task in itself. I used the VirtualBox Ubuntu setup that was done in the first week. However, the program didn't run as expected and showed a blank view even though a sample program for a circle was pre-loaded. I tried make clean, make fab again to no avail. I finally tracked down the problem to be a missing library and it worked fine after I did some pip install taking cue from the github page of kokopelli.</p><p>Then Francisco showed how Neil had made the entire inventory library in code. He even programmed the Alphabets instead of using a font!</p><p>We opened Neil's hello.ftdi circuit and added an led and button to it.</p><p><div class="col-md-12"><img src="img/w4/kokopelli_board.png" class="img-responsive"></div></p><p>files to be added</p>
-                
-<!--
+                <p>Day 1 started off with Francisco going through the FabLab presentation, where he explained the need for digital manufacturing and how our choices are impacting the dumping of tonnes of waste due to mass production.</p>
+                <p>We proceeded with installation of Kokopelli, which uses code to produce electronic circuit design. The installation proved to be a task in itself. I used the VirtualBox Ubuntu setup that was done in the first week. However, the program didn't run as expected and showed a blank view even though a sample program for a circle was pre-loaded. I tried make clean, make fab again to no avail. I finally tracked down the problem to be a missing library and it worked fine after I did some pip install taking cue from the github page of kokopelli.</p>
+                <p>Then Francisco showed how Neil had made the entire inventory library in code. He even programmed the Alphabets instead of using a font!</p>
+                <p>We opened Neil's hello.ftdi circuit and added an led and button to it.</p>
+                <p>
+                    <div class="col-md-12"><img src="img/w4/kokopelli_board.png" class="img-responsive"></div>
+                </p>
+                <p>files to be added</p>
+
+                <!--
                 <div class="row">
                     <div class="col-md-6">
                         <div class="panel panel-default">
@@ -215,22 +225,24 @@
                 <h2 id="sec2">Day 2</h2>
 
                 <div class="row">
-                    
-                    <div class="col-md-6"><img src="" alt="image of sensor to be added" class="img-responsive img-zoom"></div> 
-                     <div class="col-md-6"><p>Day 2 was for actually milling out the circuit that we had built yesterday using Kokopelli. Since there is only one Roland Modella available, we took turns in milling our boards. While I was waiting for my turn, I thought of tweaking and adding some more components to it. First I looked into the available sensors in the lab. I found a light sensor, which was a PHOTODARLINGTON NPN CLR PLCC-2. I thought it would be great if I could add this as an ambient light sensor to switch on the LED when it was dark and switch off the LED when it was bright. This would allow me to learn more about analog sensors along with the Push-Button, which is a digital Sensor.</p></div> 
+
+                    <div class="col-md-6"><img src="" alt="image of sensor to be added" class="img-responsive img-zoom"></div>
+                    <div class="col-md-6">
+                        <p>Day 2 was for actually milling out the circuit that we had built yesterday using Kokopelli. Since there is only one Roland Modella available, we took turns in milling our boards. While I was waiting for my turn, I thought of tweaking and adding some more components to it. First I looked into the available sensors in the lab. I found a light sensor, which was a PHOTODARLINGTON NPN CLR PLCC-2. I thought it would be great if I could add this as an ambient light sensor to switch on the LED when it was dark and switch off the LED when it was bright. This would allow me to learn more about analog sensors along with the Push-Button, which is a digital Sensor.</p>
+                    </div>
 
 
-<!--
+                    <!--
                     <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
                     <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
 -->
                     <p></p>
                 </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="img/w1d1/ubuntu_running.png" class="img-responsive img-zoom">
-                </div>
-<!--
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/w1d1/ubuntu_running.png" class="img-responsive img-zoom">
+                    </div>
+                    <!--
                 <div class="col-md-6">
                     <p>
                         It has been a while since I've used Ubuntu, so the installation and setup acted like a refresher for me. Tried out the basic commands on the terminal.
@@ -246,10 +258,10 @@
                 </div>
 -->
 
-            </div>
-        <div class="row">
-            <div class="col-md-6">
-<!--
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--
             <h4>Version Control - Mercurial</h4>
             <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p>
             <h4>Documentation - Website</h4>
@@ -275,86 +287,86 @@
     <p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>
 -->
 
-                <hr>
-<!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
-                <hr> </div>
-            <!--/right-->
-        </div>
-        <!--/row-->
-    </div>
-    <!--/container-->
+                        <hr>
+                        <!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
+                        <hr> </div>
+                    <!--/right-->
+                </div>
+                <!--/row-->
+            </div>
+            <!--/container-->
 
-    <script src="js/analytics.js" async=""></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-
-
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script src="js/analytics.js" async=""></script>
+            <script type="text/javascript" src="js/jquery.js"></script>
 
 
-
-    <script type="text/javascript" src="js/angular.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
 
-    <!-- JavaScript jQuery code from Bootply.com editor  -->
+            <script type="text/javascript" src="js/angular.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
 
-            /* activate sidebar */
-            $('#sidebar').affix({
-                offset: {
-                    top: 235
-                }
-            }); /* activate scrollspy menu */
-            var $body = $(document.body);
-            var navHeight = $('.navbar').outerHeight(true) + 10;
-            $body.scrollspy({
-                target: '#leftCol',
-                offset: navHeight
-            }); /* smooth scrolling sections */
-            $('a[href*=#]:not([href=#])').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top - 50
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
 
-        });
-    </script>
+            <!-- JavaScript jQuery code from Bootply.com editor  -->
 
-    <script>
-      $(document).ready(function(){
-        $('.img-zoom').hover(function() {
-            $(this).addClass('transition');
+            <script type="text/javascript">
+                $(document).ready(function () {
 
-        }, function() {
-            $(this).removeClass('transition');
-        });
-      });
-    </script>
+                    /* activate sidebar */
+                    $('#sidebar').affix({
+                        offset: {
+                            top: 235
+                        }
+                    }); /* activate scrollspy menu */
+                    var $body = $(document.body);
+                    var navHeight = $('.navbar').outerHeight(true) + 10;
+                    $body.scrollspy({
+                        target: '#leftCol',
+                        offset: navHeight
+                    }); /* smooth scrolling sections */
+                    $('a[href*=#]:not([href=#])').click(function () {
+                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                            var target = $(this.hash);
+                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                            if (target.length) {
+                                $('html,body').animate({
+                                    scrollTop: target.offset().top - 50
+                                }, 1000);
+                                return false;
+                            }
+                        }
+                    });
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-40413119-1', 'bootply.com');
-        ga('send', 'pageview');
-    </script>
+                });
+            </script>
+
+            <script>
+                $(document).ready(function () {
+                    $('.img-zoom').hover(function () {
+                        $(this).addClass('transition');
+
+                    }, function () {
+                        $(this).removeClass('transition');
+                    });
+                });
+            </script>
+
+            <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-40413119-1', 'bootply.com');
+                ga('send', 'pageview');
+            </script>
 
 
 
