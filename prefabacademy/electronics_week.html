@@ -264,21 +264,100 @@ make fab</code></pre>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <p>Next I milled the board using fab modules on the Modella</p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w4/fab_ftdi_mill.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
                         <p>
                             <b>Downloadable Files :</b>
+                            <br>
                             <a href="img/w4/hello.ftdi.44.light.sensor.cad">hello.ftdi.44.light.sensor.cad</a>
+                            <br>
+                            <a href="img/w4/hello_ftdi_btn_light_sensor_traces.png">hello_ftdi_btn_light_sensor_traces.png</a>
+                            <br>
+                            <a href="img/w4/hello_ftdi_btn_light_sensor_cutout.png">hello_ftdi_btn_light_sensor_cutout.png</a>
+                            <br>
+                            <a href="img/w4/hello_ftdi_btn_light_sensor_circuit.png">hello_ftdi_btn_light_sensor_circuit.png</a>
                         </p>
                     </div>
                 </div>
                 <hr>
                 <h2 id="sec3">Day 3</h2>
-                <p>
-                    Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p>
-                <h4>CAD Design Softwares</h4>
-                <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Now it was time to solder the components to the board milled yesterday. I prepared a component requirement sheet and sourced the discrete componenets from the inventory.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w4/solder.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+                        <p>After milling the circuit following the procedure learnt in week 2, it was time to program the board. I set up the Arduino IDE to be able to program the Attiny by following the instructions <a href="http://highlowtech.org/?p=1695">here.</a> Although not all the functionality of the Arduino language is not available for Attiny chips, the basic analog and digital Read/Write works well and good.
+                        </p>
+                        <p>Following the tutorial, I set up the crystal as 20MHz, IC as Attiny44 and burned the bootloader.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w4/arduinoBoot.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+                        <p>The first task was to light the LED with the push of the button. I wrote the code for the same. I also tweaked the code to sense the ambient light and control the LED accordingly</p>
+                        <pre><code>int LED = 8;
+int LIGHT_SENSOR = 2;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(LED, OUTPUT);
+  pinMode(LIGHT_SENSOR, INPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  if(analogRead(LIGHT_SENSOR)>500)
+    digitalWrite(LED, HIGH);
+  else
+    digitalWrite(LED, LOW);
+}</code></pre>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w4/1447313896404.gif" class="img-responsive">
+                    </div>
+
+                </div>
+
+
                 <h2 id="sec4">Day 4</h2>
-                <p>Unfortunately I was unable to attend Day 4 but I got to know that we were continuing with Rhino software that Luciano had showed us the previous day. So I went hunting for some basic youtube tutorials for Rhino and made some simple shapes and objects. The next day I learnt from Sibu regarding the interface and some tips and tricks.</p>
-                <p>Rhino screenshots to be added.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>The second task was to interface with the serial monitor such that the LED can be controlled by giving a 0 or 1 from the serial link. I wrote the code for the same. I ran into a problem. When giving a 1, the LED lit up for a very very short amount of time that it seemed as if no change occured. Later I fixed it by adding a delay of 500 milliseconds</p>
+                        <pre><code>int LED = 8;
+int c;
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(0, 1); // RX, TX
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED,OUTPUT);
+  mySerial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  c = mySerial.read();
+  if(c=='1')
+    digitalWrite(LED,HIGH);
+    delay(500);
+  if(c=='2')
+    digitalWrite(LED,LOW);
+    delay(500);
+}</code></pre>
+                    </div>
+                </div>
+
+
                 <hr>
                 <h2 id="sec5">Day 5</h2>
                 <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p>
