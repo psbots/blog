@@ -13,16 +13,16 @@
         .ng-hide {
             display: none !important;
         }
-
+        
         ng\:form {
             display: block;
         }
-
+        
         .ng-animate-start {
             clip: rect(0, auto, auto, 0);
             -ms-zoom: 1.0001;
         }
-
+        
         .ng-animate-active {
             clip: rect(-1px, auto, auto, 0);
             -ms-zoom: 1;
@@ -56,43 +56,43 @@
 
     <style type="text/css">
         /*A Bootstrap 3.1 affix sidebar templatefrom http://bootply.comThis CSS code should follow the 'bootstrap.css'in your HTML file.license: MITauthor: bootply.com*/
-
+        
         body {
             padding-top: 50px;
             font-size: 200%;
             font-family: Georgia, "Times New Roman", Serif;
         }
-
+        
         #masthead {
             min-height: 250px;
         }
-
+        
         #masthead h1 {
             font-size: 30px;
             line-height: 1;
             padding-top: 20px;
         }
-
+        
         #masthead .well {
             margin-top: 8%;
         }
-
+        
         @media screen and (min-width: 768px) {
             #masthead h1 {
                 font-size: 50px;
             }
         }
-
+        
         .navbar-bright {
             background-color: #111155;
             color: #fff;
         }
-
+        
         .affix-top,
         .affix {
             position: static;
         }
-
+        
         @media (min-width: 979px) {
             #sidebar.affix-top {
                 position: static;
@@ -105,19 +105,19 @@
                 width: 228px;
             }
         }
-
+        
         #sidebar li.active {
             border: 0 #eee solid;
             border-right-width: 5px;
         }
-
+        
         .img-zoom {
             -webkit-transition: all .2s ease-in-out;
             -moz-transition: all .2s ease-in-out;
             -o-transition: all .2s ease-in-out;
             -ms-transition: all .2s ease-in-out;
         }
-
+        
         .transition {
             -webkit-transform: scale(2);
             -moz-transform: scale(2);
@@ -187,15 +187,20 @@
                 <hr>
                 <p>Week 1 involved getting to know fellow participants and the instructor. We were guided through the various software setup required for successfully completing FabAcademy. The weeks activities included installing and getting familiar with :
                     <ul>
-                    <li>version control software - mercurial and git</li>
-                    <li>virtualbox ubuntu setup</li>
-                    <li>fab modules setup on Ubuntu</li>
-                    <li>2D and 3D design softwares</li>
-                </ul> </p>
+                        <li>version control software - mercurial and git</li>
+                        <li>virtualbox ubuntu setup</li>
+                        <li>fab modules setup on Ubuntu</li>
+                        <li>2D and 3D design softwares</li>
+                    </ul>
+                </p>
                 <h2 id="sec1">Day 1</h2>
                 <img src="img/w1/fablabdoor.jpg" class="img-responsive">
-                <p>Day 1 started off with all the participants introducing themselves. We were fortunate to have someone like Luciano Betoldi who has a lot of experience in running the FabLab at Barcelona as our instructor.</p><p>Luciano told us about the FabAcademy program, how it was very challenging but rewarding as well. He mentioned the various topics that would be covered by Neil during the 6 month long classes and gave us a hint about the weekly assignments.</p><p>He also showed a few examples of Final projects made by participants of earlier FabAcademy runs and showed us the websites for documentation.</p><p>Then he moved on to explain about the Pre-FabAcademy, its need and aim.</p><p>The equipments and consumables in the lab were in bit of a dis-order, and we spent the rest of the day rearranging and reorganising the lab for improving our productivity in the coming days as recommended by Luciano.</p>
-<!--
+                <p>Day 1 started off with all the participants introducing themselves. We were fortunate to have someone like Luciano Betoldi who has a lot of experience in running the FabLab at Barcelona as our instructor.</p>
+                <p>Luciano told us about the FabAcademy program, how it was very challenging but rewarding as well. He mentioned the various topics that would be covered by Neil during the 6 month long classes and gave us a hint about the weekly assignments.</p>
+                <p>He also showed a few examples of Final projects made by participants of earlier FabAcademy runs and showed us the websites for documentation.</p>
+                <p>Then he moved on to explain about the Pre-FabAcademy, its need and aim.</p>
+                <p>The equipments and consumables in the lab were in bit of a dis-order, and we spent the rest of the day rearranging and reorganising the lab for improving our productivity in the coming days as recommended by Luciano.</p>
+                <!--
                 <div class="row">
                     <div class="col-md-6">
                         <div class="panel panel-default">
@@ -217,170 +222,189 @@
                 <h2 id="sec2">Day 2</h2>
 
                 <div class="row">
-                     <div class="col-md-6"><img src="img/w1/fabuntu.png" class="img-responsive img-zoom"></div>
-                    <div class="col-md-6"><p>Day 2 started off with Luciano telling us about the software setup used in FabAcademy. He asked all of us to get Ubuntu running on our laptops. Since I'm using a Mac, I found it better to get Ubuntu running on a VirtualBox instead of installing it in the hard-disk. </p></div>
+                    <div class="col-md-6"><img src="img/w1/fabuntu.png" class="img-responsive img-zoom"></div>
+                    <div class="col-md-6">
+                        <p>Day 2 started off with Luciano telling us about the software setup used in FabAcademy. He asked all of us to get Ubuntu running on our laptops. Since I'm using a Mac, I found it better to get Ubuntu running on a VirtualBox instead of installing it in the hard-disk. </p>
+                    </div>
 
 
-<!--
+                    <!--
                     <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
                     <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
 -->
                     <p></p>
                 </div>
-            <div class="row">
-                
-                <div class="col-md-6">
-                    <p>
-                        It has been a while since I've used Ubuntu, so the installation and setup acted like a refresher for me. Tried out the basic commands on the terminal.
-                        <ul>
-                        <li><b>sudo apt-get update</b> : To update all the ubuntu packages</li>
-                        <li><b>sudo apt-get upgrade</b> : To upgrade all the software to the latest version</li>
-                            <li><b>cd</b> : To change directory</li>
-                            <li><b>ls</b> : To list the contents of the current directory</li>
-                            <li><b>mkdir</b> : To make a directory</li>
-                            <li><b>pwd</b> : To print working directory</li>
-                    </ul>
-                    </p>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <p>
+                            It has been a while since I've used Ubuntu, so the installation and setup acted like a refresher for me. Tried out the basic commands on the terminal.
+                            <ul>
+                                <li><b>sudo apt-get update</b> : To update all the ubuntu packages</li>
+                                <li><b>sudo apt-get upgrade</b> : To upgrade all the software to the latest version</li>
+                                <li><b>cd</b> : To change directory</li>
+                                <li><b>ls</b> : To list the contents of the current directory</li>
+                                <li><b>mkdir</b> : To make a directory</li>
+                                <li><b>pwd</b> : To print working directory</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w1/ubuntu_running.png" class="img-responsive img-zoom">
+                    </div>
                 </div>
-            <div class="col-md-6">
-                    <img src="img/w1/ubuntu_running.png" class="img-responsive img-zoom">
-            </div>
-            </div>
-        <div class="row">
-            
-            <div class="col-md-12">
-                    <img src="img/w1/blog.jpg" class="img-responsive">
-            </div>
-            
-            <div class="col-md-12">
-            <h4><b>Version Control - Mercurial and Git</b></h4>
-            <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p><p>Since I already had a github account and was running a blog using Github Pages : <a href="http://psbots.in">psbots.in</a>, I thought it would be best to have the documentation as a sub-directory of my blog and hence I placed it as shown in the figure.</p>
-            <h4><b>Documentation - Website</b></h4>
-            <p>We were asked to work on a website to document all the activities of the Pre-FabAcademy</p><p>I started off looking for good starter-templates for making the website. Landed a very simple and basic one, with a toggle button slider.</p><p>Since the documentation is a git repository, new content can be updated to Github pages using the following commands :</p>
-            <pre><code>git add .
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <img src="img/w1/blog.jpg" class="img-responsive">
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4><b>Version Control - Mercurial and Git</b></h4>
+                        <p>Version control software was introduced and Luciano gave the instructions to setup mercurial on Ubuntu via a newly created slack channel for the class</p>
+                        <p>Since I already had a github account and was running a blog using Github Pages : <a href="http://psbots.in">psbots.in</a>, I thought it would be best to have the documentation as a sub-directory of my blog and hence I placed it as shown in the figure.</p>
+                        <h4><b>Documentation - Website</b></h4>
+                        <p>We were asked to work on a website to document all the activities of the Pre-FabAcademy</p>
+                        <p>I started off looking for good starter-templates for making the website. Landed a very simple and basic one, with a toggle button slider.</p>
+                        <p>Since the documentation is a git repository, new content can be updated to Github pages using the following commands :</p>
+                        <pre><code>git add .
 git commit -m "message to signify new content"
 git push
             </code></pre>
-            </div>
-        </div>
+                    </div>
+                </div>
                 <hr>
                 <h2 id="sec3">Day 3</h2>
-        <div class="row">
-            <div class="col-md-12">    
-            <p>
-                    Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p><p>We then proceeded with the installation of fab modules on the ubuntu virtual machine, following the instructions at <a src="http://kokompe.cba.mit.edu">kokompe.cba.mit.edu</a>.</p><p>After downloading the fab_src.zip from the downloads section, it was unzipped, and the following commands were run for installation.</p><pre><code>make fab
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            Although Ubuntu was set-up yesterday, some of the participants were still configuring the software. So in the meantime, Luciano asked us to continue working on the website. Luciano had planned to get everyone's website up on MIT server using the mercurial vcs we had installed earlier, but faced some trouble in getting the access. So he decided not to waste time and asked us to proceed with offline documentation for now.</p>
+                        <p>We then proceeded with the installation of fab modules on the ubuntu virtual machine, following the instructions at <a src="http://kokompe.cba.mit.edu">kokompe.cba.mit.edu</a>.</p>
+                        <p>After downloading the fab_src.zip from the downloads section, it was unzipped, and the following commands were run for installation.</p><pre><code>make fab
 make install</code></pre>
-                 <p>But the installation got into all sorts of errors, claiming "unable to find" errors. That is when I realised that I forgot to install the dependencies.</p>
-            <pre><code>sudo apt-get install python python-wxgtk2.8 python-dev python-pip gcc g++ libpng12-dev libgif-dev make bash okular libboost-thread-dev libboost-system-dev cmake</code></pre>
-        <h4><b>CAD Design Softwares</b></h4>
-                <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available. He passed aroung a Pen Drive with installation files of many different CAD Software.</p><p>I tried out a few of them, here are the screenshots.</p>
-            </div>
-            <div class="col-md-6">
-                    <img src="img/w1/shapesmith.png" class="img-responsive img-zoom">
-            </div>
-            <div class="col-md-6">
-                    <img src="img/w1/tinkercad.png" class="img-responsive img-zoom">
-            </div>
-            <div class="col-md-6">
-                    <img src="img/w1/autocad.png" class="img-responsive img-zoom">
-            </div>
-            <div class="col-md-6">
-                    <video src="img/w1/Screen%20Capture%202.mov" class="img-responsive img-zoom">
-            </div>
-            </div>
+                        <p>But the installation got into all sorts of errors, claiming "unable to find" errors. That is when I realised that I forgot to install the dependencies.</p>
+                        <pre><code>sudo apt-get install python python-wxgtk2.8 python-dev python-pip gcc g++ libpng12-dev libgif-dev make bash okular libboost-thread-dev libboost-system-dev cmake</code></pre>
+                        <h4><b>CAD Design Softwares</b></h4>
+                        <p>Luciano told us that he had an Industrial Design background. He explained the basics of CAD and the power it gives in making various things in the FabLab. After that he showed us different CAD softwares available. He passed aroung a Pen Drive with installation files of many different CAD Software.</p>
+                        <p>I tried out a few of them, here are the screenshots.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w1/shapesmith.png" class="img-responsive img-zoom">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w1/tinkercad.png" class="img-responsive img-zoom">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w1/autocad.png" class="img-responsive img-zoom">
+                    </div>
+                    <div class="col-md-6">
+                        <video src="img/w1/Screen%20Capture%202.mov" class="img-responsive img-zoom">
+                    </div>
+                </div>
                 <h2 id="sec4">Day 4</h2>
                 <p>Unfortunately I was unable to attend Day 4 but I got to know that we were continuing with Rhino software that Luciano had showed us the previous day. So I went hunting for some basic youtube tutorials for Rhino and made some simple shapes and objects. The next day I learnt from Sibu regarding the interface and some tips and tricks.</p>
-        <p>Rhino screenshots and files to be added.</p>
+                <p>Rhino screenshots and files to be added.</p>
                 <hr>
                 <h2 id="sec5">Day 5</h2>
-            <div class="row">
-                <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p><p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are : <ul><li>Geometric Function representation</li><li>Hierarchical Design</li><li>Parametric Design</li></ul></p>
-                     <div class="col-md-6"><img src="img/w1/antimony.png" class="img-responsive img-zoom"></div>
-                    <div class="col-md-6"><p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p><p>Files to be added</p></div>
-                    <p></p>
+                <div class="row">
+                    <div class="col-md-12" <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p>
+                        <p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are :
+                            <ul>
+                                <li>Geometric Function representation</li>
+                                <li>Hierarchical Design</li>
+                                <li>Parametric Design</li>
+                            </ul>
+                        </p>
+                        <div>
+                            <div class="col-md-12"><img src="img/w1/antimony.png" class="img-responsive"></div>
+                            <div class="col-md-12">
+                                <p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p>
+                                <p>Files to be added</p>
+                            </div>
+                            <p></p>
+                        </div>
+
+
+                        <hr>
+                        <!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
+                        <hr> </div>
+                    <!--/right-->
                 </div>
-   
+                <!--/row-->
+            </div>
+            <!--/container-->
 
-                <hr>
-<!--                <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>-->
-                <hr> </div>
-            <!--/right-->
-        </div>
-        <!--/row-->
-    </div>
-    <!--/container-->
-
-    <script src="js/analytics.js" async=""></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
+            <script src="js/analytics.js" async=""></script>
+            <script type="text/javascript" src="js/jquery.js"></script>
 
 
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+            <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
 
-    <script type="text/javascript" src="js/angular.js"></script>
+            <script type="text/javascript" src="js/angular.js"></script>
 
 
 
-    <!-- JavaScript jQuery code from Bootply.com editor  -->
+            <!-- JavaScript jQuery code from Bootply.com editor  -->
 
-    <script type="text/javascript">
-        $(document).ready(function () {
+            <script type="text/javascript">
+                $(document).ready(function () {
 
-            /* activate sidebar */
-            $('#sidebar').affix({
-                offset: {
-                    top: 235
-                }
-            }); /* activate scrollspy menu */
-            var $body = $(document.body);
-            var navHeight = $('.navbar').outerHeight(true) + 10;
-            $body.scrollspy({
-                target: '#leftCol',
-                offset: navHeight
-            }); /* smooth scrolling sections */
-            $('a[href*=#]:not([href=#])').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top - 50
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
+                    /* activate sidebar */
+                    $('#sidebar').affix({
+                        offset: {
+                            top: 235
+                        }
+                    }); /* activate scrollspy menu */
+                    var $body = $(document.body);
+                    var navHeight = $('.navbar').outerHeight(true) + 10;
+                    $body.scrollspy({
+                        target: '#leftCol',
+                        offset: navHeight
+                    }); /* smooth scrolling sections */
+                    $('a[href*=#]:not([href=#])').click(function () {
+                        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                            var target = $(this.hash);
+                            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                            if (target.length) {
+                                $('html,body').animate({
+                                    scrollTop: target.offset().top - 50
+                                }, 1000);
+                                return false;
+                            }
+                        }
+                    });
 
-        });
-    </script>
+                });
+            </script>
 
-    <script>
-      $(document).ready(function(){
-        $('.img-zoom').hover(function() {
-            $(this).addClass('transition');
+            <script>
+                $(document).ready(function () {
+                    $('.img-zoom').hover(function () {
+                        $(this).addClass('transition');
 
-        }, function() {
-            $(this).removeClass('transition');
-        });
-      });
-    </script>
+                    }, function () {
+                        $(this).removeClass('transition');
+                    });
+                });
+            </script>
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-40413119-1', 'bootply.com');
-        ga('send', 'pageview');
-    </script>
+            <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-40413119-1', 'bootply.com');
+                ga('send', 'pageview');
+            </script>
 
 
 

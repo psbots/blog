@@ -174,7 +174,7 @@
                     <li><a href="#sec1">3D Designing the GamePad in Antimony</a></li>
                     <li><a href="#sec2">Designing the GamePad circuit in Kokopelli</a></li>
                     <li><a href="#sec3">Programming the Electronics</a></li>
-                    <li><a href="#sec4">Programming the Computer interface</a></li>
+                    <!--                    <li><a href="#sec4">Programming the Computer interface</a></li>-->
 
                 </ul>
             </div>
@@ -195,182 +195,169 @@
                     <div class="col-md-12">
                         <img src="img/w3/gamepad_bottom.png" class="img-responsive">
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>
-                            Now click on load image and select the required image. Resize it as per the requirements. Select vinyl in the dropdown list and click on make .path followed by make .camm
+                        <p>I soon came to realise my mistake in modelling Fab-GamePad exactly like the gamepads available. I then decided to take full advantage of the power of Antimony by relying on as many symmetric shapes as possible. Here is the final design for the top portion of the gamepad.
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w2/vinyl_fab_mod.jpg" class="img-responsive">
+                        <img src="img/w3/circlepad.png" class="img-responsive">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Next set-up the Vinyl Cutter by loading the vinyl sheet between the rollers as shown. The roll can be set by selecting "Roll" and then Origin can also be set. Click on "send it" on the fab modules to start cutting the vinyl.
+                        <p>I exported the file as .stl and made the .gcode file from Cura in the Normal Print mode. Time for some 3D printing!
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <img src="img/w2/vinyl_red.jpg" class="img-responsive">
+                        <img src="img/w3/gamepad_print2.jpg" class="img-responsive">
                     </div>
                     <div class="col-md-6">
-                        <img src="img/w2/vinyl_power.jpeg" class="img-responsive">
+                        <img src="img/w3/gamepad_print.jpg" class="img-responsive">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Here's the Vinyl cut out and placed on a masking tape. I put the sticker on my hard disk. Looks pretty great! This machine really makes it very convenient to make labels and graphic stickers for our projects.
+                        <p>Found that there was an imperfection in the print in the areas where the button goes. This was due to a small provision I gave whuch did not have any support. Need to improve the design in the next iteration.
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <img src="img/w2/vinyl_mask.jpg" class="img-responsive">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/vinyl_harddisk.jpg" class="img-responsive">
+                        <img src="img/w3/gamepad_print3mistake.jpg" class="img-responsive">
                     </div>
                 </div>
 
                 <hr>
-                <h2 id="sec2">3D Printing a Pen Stand</h2>
+                <h2 id="sec2">Designing the GamePad circuit in Kokopelli</h2>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Luciano asked us to design an object within 5cm * 5cm * 5 cm dimensions, which cannot be manufactured subtractively. The idea was to design an intricate enough object that would be difficult to manufacture subtractively but simple enough to 3D Print.
-                        </p>
-                        <p>I was brainstorming on what could be built, and came up with a very simple design for a cylindrical Pen Holder with a pattern of rounded rectangular holes around it. I used Antimony to do the design.
-                        </p>
-                        <p>
-                            First I made a cylinder with the outer radius and subtracted a cylinder to get the required thickness for the stand.
+                        <p>I liked the entire concept of designing a circuit using code. I decided to go for a simple circuit inspired from Neil's HelloFTDI board. First I removed the crystal, so as to get more free input pins. The GamePad has 7 buttons, 4 for direction controls and the rest for miscellaneous controls. Here are the original size design files :
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w2/pen_stand.png" class="img-responsive">
-                    </div>
-
-
-                    <!--
-                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
-                    <div class="col-md-4"><img src="js/300x300.png" class="img-responsive"></div>
--->
-
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>
-                            Then I created a rounded cube and subtracted it from the cylinder after placing it in the position I wanted. Then I used the Array Polar to replicate the hole around the surface of the cylinder.
-                        </p>
+                        <img src="img/w3/gamepad_kokopelli.png" class="img-responsive">
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w2/pen_stand2.png" class="img-responsive">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Finally, I copy pasted the Array twice, translated it to the middle and upper positions, rotated it a bit to give it an interesting asymmetry and here’s the final result! Here are the .sb and .stl files :
-
-                        </p>
+                        <img src="img/w3/gamepad_traces.png" class="img-responsive">
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w2/pen_stand3.png" class="img-responsive">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Now comes the actual 3D printing of the model. First I opened the .stl model in Cura and exported the .gcode with the Normal mode settings.
-                        </p>
-                    </div>
-                    <div class="col-md-12">
-                        <img src="img/w2/penstand_cura.png" class="img-responsive">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Then I loaded the .gcode file onto the SD card and gave the Print command on the Ultimaker 2 machine.
-                        </p>
-                    </div>
-                    <div class="col-md-12">
-                        <img src="img/w2/penstand_ulti.jpg" class="img-responsive">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Here’s the Pen Holder in action at the Lab. Though it was meant as a “Pen” holder, it is much more useful now near the soldering station for holding Cutters, Scale and Tweezers!
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/penstand_fab.jpg" class="img-responsive">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/penstand_final.jpg" class="img-responsive">
-                    </div>
-                </div>
-                <hr>
-                <h2 id="sec3">Laser Cutter</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>The laser cutter at FabLab Kochi was out of order, so we all went to FabLab Thiruvananthapuram for practicing on it.
-                        </p>
-                        <p>Luciano tried to set up the fab modules to work with the laser cutter, but faced trouble since this was a new machine and not the usual one found in older FabLabs.
-                        </p>
-                        <p>He proceeded with the vendor software Trotec Job Control to show us a demo of the laser cutting process. He then asked us to design a small object to practice the laser cutting process.
-                        </p>
-                    </div>
-                    <div class="col-md-12">
-                        <img src="img/w2/laser_machine.jpg" class="img-responsive">
+                        <img src="img/w3/gamepad_cutout.png" class="img-responsive">
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <p>
-                            I designed a basic ring-shaped coaster with a hexagonal design to be etched.
+                            Time to mill this baby out!
                         </p>
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w2/laser_design.jpg" class="img-responsive">
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>First the laser is focused using the focusing aparatus and the Button controls on the right end of the machine.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/laser_cut.jpg" class="img-responsive">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/laser_controls.jpg" class="img-responsive">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>The speed and intensity of the laser can be varied using the settings of the Trotec software.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/laser_software.00_jpg_srz" class="img-responsive">
+                        <img src="img/w3/gamepad_mill.jpg" class="img-responsive">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Here's the final coaster!
+                        <p>Now let's solder the components. I made a requirement sheet and got all the discrete components first from the inventory, and soldered it in place.
+
                         </p>
                     </div>
-                    <div class="col-md-6">
-                        <img src="img/w2/laser_final.jpg" class="img-responsive">
+                    <div class="col-md-12">
+                        <img src="img/w3/gamepad_circuitparts.jpg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Finally, we have the Fab-GamePad circuit.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w3/gamepad_soldered.jpg" class="img-responsive">
                     </div>
                 </div>
 
                 <hr>
-                <h2 id="sec4">Electronics Production</h2>
+                <h2 id="sec3">Programming the Electronics</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Since I did not use any crystal, I should burn the bootloader from Arduino with the proper setting as shown in figure otherwise the board may not respond.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w3/arduinoBoot.png" class="img-responsive">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>When tested one of the buttons with the standard code for input push-button, I found randomly fluctuating values. Unfortunately, instead of wiring the button between Ground and a Pin, I did it between VCC and the Pin. This rendered it impossible to use the Pull-Up resistor (since such a circuit calls for pull-down instead) and I had to do some patch work to add external 1k resitors as pull-down resistors</p>
+                        <p>
+                            Here's the final code for the board.
+                            <pre><code>
+int buttonA = 4;
+int buttonB = 3;
+int buttonC = 2;
+int buttonU = 9;
+int buttonD = 8;
+int buttonL = 7;
+int buttonR = 10;
+
+int a,b,c,u,d,l,r;
+
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(0, 1); // RX, TX
+
+void setup() {
+  
+  pinMode(buttonA,INPUT);
+  pinMode(buttonB,INPUT);
+  pinMode(buttonC,INPUT);
+  pinMode(buttonU,INPUT);
+  pinMode(buttonD,INPUT);
+  pinMode(buttonL,INPUT);
+  pinMode(buttonR,INPUT);
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(9600);
+}
+
+void loop() { 
+
+  a = digitalRead(buttonA);
+  b = digitalRead(buttonB);
+  c = digitalRead(buttonC);
+  u = digitalRead(buttonU);
+  d = digitalRead(buttonD);
+  l = digitalRead(buttonL);
+  r = digitalRead(buttonR);
+
+  if(a==1)
+    mySerial.println('a');
+  else if(b==1)
+    mySerial.println('b');
+  else if(c==1)
+    mySerial.println('c');
+  else if(u==1)
+    mySerial.println('u');
+  else if(d==1)
+    mySerial.println('d');
+  else if(l==1)
+    mySerial.println('l');
+  else if(r==1)
+    mySerial.println('r');
+
+}
+
+                            </code></pre>
+                        </p>
+                    </div>
+                </div>
+
+
+                <hr>
+                <!--                <h2 id="sec4">Electronics Production</h2>-->
 
 
                 <hr>
