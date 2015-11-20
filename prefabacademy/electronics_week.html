@@ -174,8 +174,8 @@
                     <li><a href="#sec1">Day 1</a></li>
                     <li><a href="#sec2">Day 2</a></li>
                     <li><a href="#sec3">Day 3</a></li>
-                    <li><a href="#sec4">Day 4</a></li>
-                    <li><a href="#sec4">Day 5</a></li>
+                    <li><a href="#sec4">Day 4 and 5</a></li>
+                    <!--                    <li><a href="#sec4">Day 5</a></li>-->
 
                 </ul>
             </div>
@@ -322,13 +322,13 @@ void loop() {
 }</code></pre>
                     </div>
                     <div class="col-md-12">
-                        <img src="img/w4/1447313896404.gif" class="img-responsive">
+                        <img src="img/w4/sensor_led.gif" class="img-responsive">
                     </div>
 
                 </div>
 
 
-                <h2 id="sec4">Day 4</h2>
+                <h2 id="sec4">Day 4 and 5</h2>
                 <div class="row">
                     <div class="col-md-12">
                         <p>The second task was to interface with the serial monitor such that the LED can be controlled by giving a 0 or 1 from the serial link. I wrote the code for the same. I ran into a problem. When giving a 1, the LED lit up for a very very short amount of time that it seemed as if no change occured. Later I fixed it by adding a delay of 500 milliseconds</p>
@@ -354,28 +354,70 @@ void loop() {
     digitalWrite(LED,LOW);
     delay(500);
 }</code></pre>
+                        <p>Next I wrote code for sensing if the ambient light was bright or dark and accordinly switch the LED on and off as well as simultaneously writing to the serial port.
+                            <pre><code>
+int LED = 8;
+int LIGHT_SENSOR = 2;
+int c;
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(0, 1); // RX, TX
+
+void setup() {
+  // Open serial communications and wait for port to open:
+  //Serial.begin(57600);
+  //while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+ // }
+  pinMode(LIGHT_SENSOR, INPUT);
+  pinMode(LED,OUTPUT);
+ // Serial.println("Goodnight moon!");
+
+  // set the data rate for the SoftwareSerial port
+  mySerial.begin(9600);
+}
+
+void loop() { // run over and overz
+  if (analogRead(LIGHT_SENSOR)>950) 
+  {
+    mySerial.write("Dark\n");
+    digitalWrite(LED, HIGH);
+  }
+  else
+  {
+    mySerial.write("Bright\n");
+    digitalWrite(LED, LOW);
+  }
+  delay(100);
+}
+</code></pre>
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w4/serial.gif" class="img-responsive">
                     </div>
                 </div>
 
 
                 <hr>
+                <!--
                 <h2 id="sec5">Day 5</h2>
-                <p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p>
-                <p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are :
-                    <ul>
-                        <li>Geometric Function representation</li>
-                        <li>Hierarchical Design</li>
-                        <li>Parametric Design</li>
-                    </ul>
-                </p>
-                <div class="row">
-                    <div class="col-md-6"><img src="img/w1d1/antimony.png" class="img-responsive img-zoom"></div>
-                    <div class="col-md-6">
-                        <p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p>
-                    </div>
-                    <p></p>
-                </div>
-                <p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>
+<p>On Day 5, Luciano came along with our second instructor Francisco, who would be engaging us in the last week of the Pre-FabAcademy. Luciano continued with the previous day's topic of CAD Design with Rhino. An assignment was given the previous day and the submission was discussed. I tried out the assignment in the class, trying to catch up yesterday's work.</p>
+<p>Francisco introduced yet another CAD software called Antimony. He explained the key difference between Antimony and other CAD software. Antimony is the only software that gives exact geometric representation of a 3D model instead of finite element approximations. The distinguishing features of Antimony are :
+    <ul>
+        <li>Geometric Function representation</li>
+        <li>Hierarchical Design</li>
+        <li>Parametric Design</li>
+    </ul>
+</p>
+<div class="row">
+    <div class="col-md-6"><img src="img/w1d1/antimony.png" class="img-responsive img-zoom"></div>
+    <div class="col-md-6">
+        <p>I liked Antimony for its simplicity and focus on mathematical accuracy. The software though not suited for aethetic/organic design, is very powerful for creating mechanical component design. Francisco showed us a demo for a bit-holder in Antimony. I went ahead and made a cylindrical version of the bit-holder.</p>
+    </div>
+    <p></p>
+</div>
+<p>I caught up with yesterday's Rhino with some help from Sibu, one of the Pre-FabAcademy participants. I plan to look more into Rhino during the weekend.</p>-->
 
 
                 <hr>
