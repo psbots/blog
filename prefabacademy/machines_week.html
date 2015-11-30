@@ -174,7 +174,7 @@
                     <li><a href="#sec1">Stickers with Vinyl Cutter</a></li>
                     <li><a href="#sec2">3D Printing a Pen Stand</a></li>
                     <li><a href="#sec3">Laser Cutter</a></li>
-                    <!--                    <li><a href="#sec4">Electronics Production</a></li>-->
+                    <li><a href="#sec4">Electronics Production</a></li>
 
                 </ul>
             </div>
@@ -240,7 +240,7 @@
                     <div class="col-md-12">
                         <p>
                             <b>Downloadable Files :</b>
-                            <a href="img/w2/iron_man.png">3dprint_pen_holder.sb</a>
+                            <a href="img/w2/iron_man.png">iron_man.png</a>
 
                         </p>
                     </div>
@@ -398,7 +398,117 @@
 
                 <hr>
                 <!--                <h2 id="sec4">Electronics Production</h2>-->
+                <h2 id="sec4">Electronics Production using Modella</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>The Modela is one of the most used machines in the FabLab. Its a tiny desktop CNC that can mill PCBs, create 3D models on wax and even scan in 3D. The machine is actually a is a 2.5D machine which can also be used for milling wax with limited depth (Z axis). It is preferred for making PCBs using FR-1 copper boards as it doesn’t leave any chemical wastes. But do not use it to mill FR-4 boards as it creates a lot of dust from fibre glass and which is toxic when it is inhaled.
 
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/modella.png">
+                    </div>
+                    <div class="col-md-12">
+                        <p>The main steps to mill a pcb are desiging the circuit (export as .png format), using fab modules to controll the machine, setting the machine and milling.
+
+
+
+                        </p>
+                        <p>Below you can see the design files. First part is the design output for milling the traces and the second is the outline to cut out the board. If you are using the fab modules, the the design should be in .png format. We took the design from <a href="http://fab.cba.mit.edu/content/projects/fabisp">http://fab.cba.mit.edu/content/projects/fabisp</a> which is already done using <a href="https://github.com/mkeeter/kokopelli">kokopelli</a>.
+
+
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/w2/fabisp.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/w2/outline.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><b>Setting up the Modella</b></p>
+                        <p>
+                            There are two milling bit that will be used for Electronics production in modella :
+                            <ul>
+                                <li>1/64 drill bit - For removing the unwanted copper and get the traces</li>
+                                <li>1/32 drill bit - For cutting the final board</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/bits.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+                        <p>For mounting the bit on the head, there is a screw that is to be loosen first. We can use allen key to loosen it. Then place the bit such that the majority of the bit goes inside the head. Then tighten the screw using the allen key
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/bit_allen.png" class="img-responsive">
+                    </div>
+
+                    <div class="col-md-12">
+                        <p>Next the board is placed on top of the sacrificial layer using two strips of strong double sided tape.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/board.jpg" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><b>Using fab modules</b>
+                        </p>
+                        <p>First open fab modules and select .png as input and .rml as output as shown in the screenshot below.</p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/fab_image_mill.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+                        <p>Load the traces.png file by clicking "load .png" button.</p>
+                        <p>Next we have to home the machine using trial and error to the location that we want to mill. This is done by entering suitable x and y co-ordinate values and clicking on "move to xmin,ymin"</p>
+                    </div>
+                    <div class="col-md-12">
+                        <img src="img/w2/ispFabModules-2.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Next step is to set the origin point for the Z axis. To do this, bring the milling bit down by pressing the “Down arrow” button on the machine till it almost reaches the board and then loosen the bit using the Allen key. The bit should slowly fall down and touch the surface of the board, after which the mill bit should be tightened by using the Allen key.
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <p> Click on the “Make .rml” button and send the machine file to the Modela by clicking on “Send It!”. After which the machine will start milling and removing copper from around the traces. </p>
+                        <p>Finally load the outline.png, change the milling bit to 1/32 bit following the above instructions and cut out the outline to get the final board</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/milling.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+
+                    </div>
+                    <div class="col-md-12">
+                        <p>Now its time to solder! First all the required components are listed out on a paper and the components are sourced from the consumables inventory. This allows a hassle free way to solder the components without the need to run around looking for components in between soldering.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/isp_soldering.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/w2/isp_burned.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-12">
+                        <p>I programmed the FabISP following the instructions in <a href="http://fabacademy.org/archives/content/tutorials/05_Electronics_Production/Assemble_and_Program_FabISP.html">this tutorial.</a></p>
+                        <p>The procedure failed to burn the program initially and asked to check all the connections. I ran through the soldering connections and found a couple of disconnected juntions. I reapplied solder and tried. The FabISP is successfully programmed and ready to program another!</p>
+                    </div>
+                    <div class="col-md-12">
+                        <p>
+                            <b>Downloadable Files can be found at</b>
+                            <a href="http://fab.cba.mit.edu/content/projects/fabisp">http://fab.cba.mit.edu/content/projects/fabisp</a>
+                        </p>
+                    </div>
+                </div>
 
                 <hr>
                 <hr> </div>
